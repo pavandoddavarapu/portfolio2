@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4f46e5;
+  --color-secondary: #ec4899;
+  --color-bg-light: #f8fafc;
+  --color-text-light: #0f172a;
+  --color-bg-dark: #020617;
+  --color-text-dark: #f8fafc;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+:root {
+  --bg-color: var(--color-bg-light);
+  --text-color: var(--color-text-light);
+}
+
+.dark {
+  --bg-color: var(--color-bg-dark);
+  --text-color: var(--color-text-dark);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
+
+/* Glassmorphism utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Base scrollbar styling for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.8);
+}
+
+/* User Preferences */
+body.no-animations * {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: rgba(139, 92, 246, 0.4);
+  color: #fff;
+}
+
+::-moz-selection {
+  background-color: rgba(139, 92, 246, 0.4);
+  color: #fff;
+}
