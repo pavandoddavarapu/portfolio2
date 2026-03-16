@@ -6,60 +6,25 @@ import MagneticButton from '../components/common/MagneticButton';
 const Projects = () => {
     const projects = [
         {
-            title: 'FileShare Pro',
-            description: 'A full-stack file sharing and management platform featuring a modern dashboard for secure upload, management, and activity tracking with real-time feedback.',
-            tags: ['React', 'Full-stack', 'State Management'],
-            url: 'https://github.com/Khush2040/FileShare-Pro',
-            color: 'from-blue-500/20 to-indigo-500/20'
+            title: 'Food Demand Predictor',
+            description: 'An interactive machine learning model built to predict and forecast food demand across a city, helping optimize supply chains and reduce waste.',
+            tags: ['Python', 'Machine Learning', 'Gradio', 'Hugging Face'],
+            url: 'https://github.com/pavandoddavarapu/food-demand-predictor',
+            color: 'from-blue-500/20 to-yellow-500/20'
         },
         {
-            title: 'StyleMate – AI Fashion Assistant',
-            description: 'Interactive AI-powered fashion assistant generating personalized outfit suggestions based on mood, occasion, season, and budget.',
-            tags: ['HTML', 'CSS', 'JavaScript', 'FastAPI'],
-            url: 'https://github.com/Khush2040/StyleMate',
+            title: 'CreditPathAI',
+            description: 'End-to-end Machine Learning system for predicting loan defaults and empowering data-driven lending decisions. Integrated with a real-time Streamlit dashboard.',
+            tags: ['Python', 'Machine Learning', 'Streamlit', 'Data Science'],
+            url: 'https://github.com/springboardmentor891v/CreditPathAI_Oct_Batch/tree/pavan_doddavarapu',
+            color: 'from-emerald-500/20 to-teal-500/20'
+        },
+        {
+            title: 'Smart Waste Management System',
+            description: 'IoT and Machine Learning based solution utilizing LSTM and Prophet models to predict waste accumulation patterns, optimizing collection routes and sustainability.',
+            tags: ['IoT', 'Machine Learning', 'Python', 'LSTM', 'Prophet'],
+            url: 'https://github.com/pavandoddavarapu/smart-waste-management-system',
             color: 'from-purple-500/20 to-pink-500/20'
-        },
-        {
-            title: 'Real-Time-Air-Quality-Index-AQI-Monitoring',
-            description: 'Interactive Air Quality Analysis and Prediction System built using machine learning and data visualization to forecast pollution levels.',
-            tags: ['Python', 'Streamlit', 'Machine Learning'],
-            url: 'https://github.com/Khush2040/Real-Time-Air-Quality-Index-AQI-Monitoring',
-            color: 'from-teal-500/20 to-emerald-500/20'
-        },
-        {
-            title: 'EDA-Coffee-Shop-Sales',
-            description: 'Exploratory Data Analysis (EDA) of Coffee Shop Sales using Python and Jupyter Notebook. Transforming raw data into readable insights.',
-            tags: ['Python', 'Data Analysis', 'Jupyter'],
-            url: 'https://github.com/Khush2040/EDA-Coffee-Shop-Sales',
-            color: 'from-blue-500/20 to-cyan-500/20'
-        },
-        {
-            title: 'Sales-Tracker-AI',
-            description: 'Responsive sales tracker web app with built-in Gemini chatbot. Switch between light/dark mode, and chat with an AI assistant in text or speech.',
-            tags: ['JavaScript', 'HTML', 'AI Integration'],
-            url: 'https://github.com/Khush2040/Sales-Tracker-AI',
-            color: 'from-violet-500/20 to-fuchsia-500/20'
-        },
-        {
-            title: 'CrewSync',
-            description: 'A dynamic JavaScript-based web application providing team synchronization tools, featuring a robust frontend and responsive design.',
-            tags: ['JavaScript', 'Web Development'],
-            url: 'https://github.com/Khush2040/CrewSync',
-            color: 'from-green-500/20 to-emerald-500/20'
-        },
-        {
-            title: 'Dashboard Analysis',
-            description: 'A comprehensive visual dashboard for tracking and analyzing integrated scheme performance metrics.',
-            tags: ['Dashboard', 'Analytics', 'Data Viz'],
-            url: 'https://github.com/Khush2040/Integrated-Scheme-Performance-Report-Dashboard-Analysis',
-            color: 'from-orange-500/20 to-red-500/20'
-        },
-        {
-            title: 'Parking-Management',
-            description: 'An enterprise-level Java-based system built to effectively manage and allocate parking spaces organically.',
-            tags: ['Java', 'Management Systems'],
-            url: 'https://github.com/Khush2040/Parking-Management-System',
-            color: 'from-pink-500/20 to-rose-500/20'
         }
     ];
 
