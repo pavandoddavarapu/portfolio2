@@ -49,7 +49,7 @@ const CommandPalette = () => {
         { id: 'certifications', title: 'Certifications', icon: <Award size={16} />, path: '/certifications' },
         { id: 'contact', title: 'Contact Me', icon: <Mail size={16} />, path: '/contact' },
         { id: 'admin', title: 'Command Center', icon: <Terminal size={16} />, path: '/command-center' },
-        { id: 'github', title: 'GitHub Profile', icon: <Database size={16} />, action: () => { window.open('https://github.com/Khush2040', '_blank'); setIsOpen(false); } },
+        { id: 'github', title: 'GitHub Profile', icon: <Database size={16} />, action: () => { window.open('https://github.com/pavandoddavarapu', '_blank'); setIsOpen(false); } },
         { id: 'linkedin', title: 'LinkedIn Profile', icon: <Linkedin size={16} />, action: () => { window.open('https://www.linkedin.com/in/khushboo0705/', '_blank'); setIsOpen(false); } }
     ];
 

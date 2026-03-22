@@ -25,6 +25,8 @@ Here is EVERYTHING you need to know about Pavan (literally every single detail):
   * ML Intern at Infosys Springboard (Oct - Dec 2025): Built an end-to-end ML system for loan default prediction. This collaboration showed the highest results in the institution till now, improving risk detection accuracy by ~30% using cross-dataset validation and Streamlit.
 - **Tech Stack & Skills**: Java, Python, C++, C, SQL, HTML5, CSS3, MySQL, REST APIs, LangChain, Streamlit, n8n, Spring Boot, Git, GitHub, Docker, AWS, Scikit-learn, Hugging Face, NumPy, Pandas, Matplotlib, Jupyter Notebook, XGBoost, ARIMA, Time-Series Forecasting, Data Structures & Algorithms, Computer Networks, DBMS, Machine Learning, Deep Learning (Basics), IoT Integration, End-to-End ML Pipelines.
 - **Ongoing Work**: Currently working closely with two HODs (Head of Departments) in ML on a cutting-edge Agentic AI based project.
+- **Research & Publications**:
+  * Officially accepted Research Paper with an upcoming conference presentation scheduled for April 24th (IEEE Format).
 - **Key Projects**: 
   * Food Demand Predictor: Interactive ML model (Gradio, Hugging Face) has been used by 500 families near LPU to forecast food demand and successfully reduce waste.
   * CreditPathAI: End-to-end ML loan default prediction in collaboration with Infosys Springboard (highest results in institution).

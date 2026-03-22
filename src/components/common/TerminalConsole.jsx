@@ -7,7 +7,7 @@ const TerminalConsole = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isMaximized, setIsMaximized] = useState(false);
     const [history, setHistory] = useState([
-        { type: "system", content: "Welcome to Khush2040 Portfolio Terminal v1.0.0" },
+        { type: "system", content: "Welcome to Pavan's Portfolio Terminal v1.0.0" },
         { type: "system", content: "Type 'help' to see available commands." }
     ]);
     const [input, setInput] = useState('');
@@ -30,7 +30,7 @@ const TerminalConsole = () => {
     const handleCommand = (e) => {
         if (e.key === 'Enter') {
             const cmd = input.trim().toLowerCase();
-            const newHistory = [...history, { type: "user", content: `Khush2040@visitor:~$ ${input}` }];
+            const newHistory = [...history, { type: "user", content: `Pavan@visitor:~$ ${input}` }];
             setInput('');
 
             let response = "";
@@ -39,10 +39,10 @@ const TerminalConsole = () => {
                     response = "Available commands: \n- whoami: Learn about me\n- skills: View my technical skills\n- contact: Go to contact page\n- projects: View my projects\n- clear: Clear terminal\n- exit: Close terminal";
                     break;
                 case "whoami":
-                    response = "I am Khushboo, an Aspiring Data Scientist & Analytics Professional specializing in Python, SQL, and the MERN stack.";
+                    response = "I am Doddavarapu Pavan Venkat Kumar, an aspiring ML Engineer and Data Scientist specializing in AI, Machine Learning, and Full-Stack Development.";
                     break;
                 case "skills":
-                    response = "Tech Stack: Python, SQL, Informatica (ETL), MERN Stack (MongoDB, Express, React, Node.js), AI/ML, DevOps.";
+                    response = "Tech Stack: Python, Java, C++, SQL, Machine Learning (Scikit-learn, Hugging Face), Full-Stack (React, Node.js), AWS, Docker.";
                     break;
                 case "contact":
                     response = "Navigating to /contact...";
@@ -124,7 +124,7 @@ const TerminalConsole = () => {
                                 </div>
                             ))}
                             <div className="flex items-center gap-2 mt-2">
-                                <span className="text-green-400 shrink-0">Khush2040@visitor:~$</span>
+                                <span className="text-green-400 shrink-0">Pavan@visitor:~$</span>
                                 <input
                                     ref={inputRef}
                                     type="text"

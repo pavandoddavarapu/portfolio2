@@ -3,20 +3,12 @@ import { BookOpen, FileText, ExternalLink, Sparkles } from 'lucide-react';
 
 const publicationsData = [
     {
-        title: "A Comparative Study of CPU Scheduling Algorithms for Efficient Process Management",
-        description: "Published in Volume 13, Issue XI (November 2025) of the International Journal for Research in Applied Science & Engineering Technology (IJRASET).",
+        title: "Accepted Research Paper & Upcoming Conference Presentation",
+        description: "Official research paper accepted for publication. Excitingly scheduled for a conference presentation on April 24th.",
         icon: FileText,
         color: "text-blue-500 dark:text-blue-400",
-        link: "https://www.linkedin.com/posts/khushboo0705_article-operatingsystems-cpuscheduling-activity-7424887744650182656-O68e?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEZ2_yABDyaZSty4NHcY-0q8cfsRQZDa8Rs",
-        type: "Journal Article"
-    },
-    {
-        title: "Synergizing Indian Knowledge Systems and Modern Technology: Pathways Toward Viksit Bharat 2047",
-        description: "Presented at the International Seminar (Hybrid Mode) organized by Amity University Uttar Pradesh in collaboration with ICPR, New Delhi.",
-        icon: BookOpen,
-        color: "text-purple-500 dark:text-purple-400",
-        link: "https://www.linkedin.com/posts/khushboo0705_researchpresentation-viksitbharat2047-academicjourney-activity-7418356652476739585-BMss?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEZ2_yABDyaZSty4NHcY-0q8cfsRQZDa8Rs",
-        type: "Conference Presentation"
+        link: "/IEEE.pdf",
+        type: "Conference Paper"
     }
 ];
 

@@ -133,7 +133,7 @@ const Projects = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="mt-20 flex justify-center pb-10"
             >
-                <MagneticButton href="https://github.com/Khush2040">
+                <MagneticButton href="https://github.com/pavandoddavarapu">
                     <div className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-white/5 border border-black/5 dark:border-white/10 text-gray-900 dark:text-white font-bold hover:bg-white/10 hover:border-black/10 dark:border-white/20 transition-all duration-300">
                         <Github size={20} /> View More on GitHub
                     </div>

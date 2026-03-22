@@ -12,6 +12,7 @@ import Education from '../components/home/Education';
 import Awards from '../components/home/Awards';
 
 import Languages from '../components/home/Languages';
+import Publications from '../components/home/Publications';
 import MagneticButton from '../components/common/MagneticButton';
 import { useRef } from 'react';
 import gsap from 'gsap';
@@ -88,9 +89,14 @@ const Home = () => {
                             </div>
 
                             <div className="mb-6 leading-[1.1]">
+                                <div className="overflow-hidden mb-2">
+                                    <h2 className="reveal-text text-xl sm:text-2xl md:text-3xl font-bold text-gray-600 dark:text-gray-400">
+                                        Hi, I am <span className="text-gray-900 dark:text-white">Pavan Doddavarapu</span>.
+                                    </h2>
+                                </div>
                                 <div className="overflow-hidden">
                                     <h1 className="reveal-text text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-gray-900 dark:text-white block">
-                                        Aspiring
+                                        An Aspiring
                                     </h1>
                                 </div>
                                 <div className="overflow-hidden min-h-[60px] sm:min-h-[72px] md:min-h-[85px] lg:min-h-[100px] flex items-center shrink-0">
@@ -130,9 +136,9 @@ const Home = () => {
                             <div className="avatar-reveal relative w-80 h-80 xl:w-96 xl:h-96 rounded-full p-2 bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 shadow-[0_0_50px_rgba(139,92,246,0.3)] hover:shadow-[0_0_80px_rgba(139,92,246,0.6)] transition-shadow duration-500">
                                 <div className="w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-[#0f1016] bg-white dark:bg-[#0f1016]">
                                     <img
-                                        src="/profile.jpg"
+                                        src="/pavan_real.jpg"
                                         alt="Pavan Profile"
-                                        className="w-full h-full object-cover select-none pointer-events-none hover:scale-110 transition-transform duration-700"
+                                        className="w-full h-full object-cover object-center select-none pointer-events-none scale-[1.5] hover:scale-[1.65] transition-transform duration-700"
                                     />
                                 </div>
                             </div>
@@ -142,12 +148,13 @@ const Home = () => {
                 </div>
             </div>
 
-            <Skills />
-            <Services />
             <About />
             <Education />
+            <Skills />
+            <Publications />
             <Awards />
             <Languages />
+            <Services />
 
         </PageWrapper >
     );

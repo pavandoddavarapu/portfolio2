@@ -57,7 +57,7 @@ const About = () => {
                     >
                         <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden transition-all duration-700 pointer-events-none relative">
                             <img
-                                src="/profile.jpg"
+                                src="/pavan_real.jpg"
                                 alt="Studio Profile"
                                 className="w-full h-full object-cover"
                             />
