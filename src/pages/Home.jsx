@@ -149,8 +149,8 @@ const Home = () => {
             </div>
 
             <About />
-            <Education />
             <Skills />
+            <Education />
             <Publications />
             <Awards />
             {/* <Languages /> */}
