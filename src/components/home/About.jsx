@@ -28,19 +28,22 @@ const About = () => {
 
                         <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed font-light text-base sm:text-lg mb-8">
                             <p>
-                                I am a Pre-Final Year B.Tech Computer Science student at Lovely Professional University (CGPA: 8.49) with a strong passion for Machine Learning, Artificial Intelligence, and full-stack development.
+                                I’m a <span className="text-blue-600 dark:text-blue-400 font-semibold">Pre-Final Year B.Tech Computer Science student</span> at Lovely Professional University (<span className="text-blue-600 dark:text-blue-400 font-semibold">CGPA: 8.49</span>), driven by a deep passion for <span className="text-blue-600 dark:text-blue-400 font-semibold">Machine Learning, Artificial Intelligence, and full-stack development</span>.
                             </p>
                             <p>
-                                My technical foundation covers Python, Java, C++, SQL, and a range of ML frameworks including Scikit-learn, Hugging Face, LangChain, and Streamlit. I have hands-on experience building end-to-end ML pipelines — from data preprocessing and model training to real-time deployment via interactive web apps.
+                                I specialize in building <span className="text-purple-600 dark:text-purple-400 font-semibold">end-to-end intelligent systems</span> from data preprocessing and model development to deploying scalable, real-time applications. My tech stack includes Python, Java, C++, SQL, along with modern ML and AI tools like Scikit-learn, Hugging Face, LangChain, and Streamlit.
                             </p>
                             <p>
-                                During my internship at Infosys Springboard as an ML Intern, I led the development of a loan default prediction system using 24+ features and multiple ML models, improving risk detection accuracy by ~30%. I also built a real-time Streamlit credit risk app and optimised model generalisation through cross-dataset validation.
+                                As an ML Intern at <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Infosys Springboard</span>, I led the development of a loan default prediction system that <span className="text-emerald-600 dark:text-emerald-400 font-semibold">improved risk detection accuracy by ~30%</span>, achieving the highest performance recorded within the program.
                             </p>
                             <p>
-                                Beyond internships, I have built projects such as a Hospital Load Forecasting system (using DTW + K-Shape clustering and supervised ML) and a Smart Waste Management System with IoT, GPS, and LSTM/Prophet-based overflow prediction, achieving a ~30% reduction in collection trips.
+                                I focus on building technology that creates <span className="text-orange-600 dark:text-orange-400 font-semibold">real-world impact</span>. My food waste prediction system <span className="text-orange-600 dark:text-orange-400 font-semibold">has been adopted by 500+ families</span> around LPU, actively helping reduce waste. I also developed a Smart Waste Management System integrating IoT with LSTM and Prophet forecasting, which was <span className="text-orange-600 dark:text-orange-400 font-semibold">showcased at the HSC Pre Summit for the AI Impact Summit, India</span>.
+                            </p>
+                            <p>
+                                Currently, I’m working on a cutting-edge <span className="text-cyan-600 dark:text-cyan-400 font-semibold">Agentic AI project in collaboration with senior academic leadership</span>, pushing the boundaries of autonomous agentic systems.
                             </p>
                             <p className="text-gray-800 dark:text-gray-200 font-medium border-l-2 border-blue-500 pl-4 mt-6">
-                                I am actively seeking internship and full-time opportunities in ML, AI, and Software Development where I can apply my skills, drive impact, and continue growing as a technology professional.
+                                I’m actively seeking internship and full-time opportunities in <span className="font-semibold">AI, ML, and Software Development</span> where I can build impactful solutions and grow as a high-performance engineer.
                             </p>
                         </div>
                     </motion.div>

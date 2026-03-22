@@ -11,7 +11,10 @@ const Experience = () => {
             company: 'Webstack Academy, Bangalore (Remote)',
             period: 'Mar 2026 - Present',
             description: 'Selected for an intensive 4-week internship program building full-stack applications. Developed React frontends and Node.js/Express backends, implemented RESTful APIs, and integrated MongoDB databases. Actively participated in technical evaluations and project assessments.',
-            skills: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'REST APIs', 'Full-Stack Web Dev']
+            skills: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'REST APIs', 'Full-Stack Web Dev'],
+            links: [
+                { label: 'Internship Offer Letter', url: '/certificates/webstack_academy_internship.pdf' }
+            ]
         },
         {
             type: 'work',
@@ -19,7 +22,10 @@ const Experience = () => {
             company: 'Infosys Springboard, India',
             period: 'Oct 2025 - Dec 2025',
             description: 'Developed an end-to-end Machine Learning system for loan default prediction, improving risk detection accuracy by ~30%. Built a real-time Streamlit credit risk web application and rigorously optimized model generalization through cross-dataset validation.',
-            skills: ['Machine Learning', 'Data Science', 'Streamlit', 'Model Evaluation', 'Data Analysis']
+            skills: ['Machine Learning', 'Data Science', 'Streamlit', 'Model Evaluation', 'Data Analysis'],
+            links: [
+                { label: 'Internship Certificate', url: '/certificates/infosys_internship_certificate.pdf' }
+            ]
         },
         {
             type: 'volunteer',

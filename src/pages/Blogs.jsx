@@ -63,16 +63,9 @@ const Blogs = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <div className="w-20 h-20 mx-auto bg-[#020617] border border-black/5 dark:border-white/10 rounded-2xl flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(255,255,255,0.05)]">
-                        <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Medium_logo_Monogram.svg"
-                            className="w-10 h-10 invert opacity-90"
-                            alt="Medium"
-                        />
-                    </div>
                     <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6">
                         <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
-                            Writer on Medium | Knowledge Blogger
+                            Knowledge Blogger
                         </span>
                     </h1>
                     <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
@@ -136,7 +129,7 @@ const Blogs = () => {
                         <BookOpen className="w-12 h-12 text-purple-400 mx-auto mb-6" />
                         <h2 className="text-3xl font-bold mb-4">Want more insights?</h2>
                         <p className="text-gray-700 dark:text-gray-300 mb-8 max-w-xl mx-auto text-lg hover:text-white transition-colors">
-                            Follow me on Medium where I regularly post articles on building confidence from scratch, the silent power of discipline, and balancing dreams with deadlines.
+                            Read my articles on building confidence from scratch, the silent power of discipline, and balancing dreams with deadlines.
                         </p>
                         <a
                             href="https://medium.com/@khushypro"

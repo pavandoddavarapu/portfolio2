@@ -111,15 +111,26 @@ const Navbar = () => {
                         </div>
                     </MagneticButton>
 
-                    <MagneticButton href="https://github.com/pavandoddavarapu">
+                    <MagneticButton href="https://codolio.com/profile/pavandoddavarapu">
                         <div className="p-2 rounded-full hover:bg-white/10 transition-colors">
                             <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Medium_logo_Monogram.svg"
-                                className={cn("w-[18px] h-[18px]", theme === 'dark' ? 'invert sepia saturate-0 hue-rotate-180 brightness-200 opacity-80' : 'opacity-80')}
-                                alt="Medium"
+                                src="https://codolio.com/codolio_assets/codolio.svg"
+                                className={cn("w-[18px] h-[18px]", theme === 'dark' ? 'opacity-80' : 'opacity-80 scale-110')}
+                                alt="Codolio"
                             />
                         </div>
                     </MagneticButton>
+
+                    <MagneticButton href="https://leetcode.com/u/pavandodddavarapu7/">
+                        <div className="p-2 rounded-full hover:bg-white/10 transition-colors">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                                className={cn("w-[18px] h-[18px]", theme === 'dark' ? 'invert opacity-80' : 'opacity-80')}
+                                alt="LeetCode"
+                            />
+                        </div>
+                    </MagneticButton>
+
 
                     <MagneticButton onClick={toggleTheme}>
                         <div className="p-2 rounded-full hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-white cursor-pointer">

@@ -7,24 +7,27 @@ const Projects = () => {
     const projects = [
         {
             title: 'Food Demand Predictor',
-            description: 'An interactive machine learning model built to predict and forecast food demand across a city, helping optimize supply chains and reduce waste.',
+            description: 'Driven by a passion for social good, this interactive machine learning model predicts and forecasts food demand. It has been used by 500 families near LPU to successfully reduce food waste.',
             tags: ['Python', 'Machine Learning', 'Gradio', 'Hugging Face'],
             url: 'https://github.com/pavandoddavarapu/food-demand-predictor',
-            color: 'from-blue-500/20 to-yellow-500/20'
+            color: 'from-blue-500/20 to-yellow-500/20',
+            image: '/projects/food_demand_predictor.png'
         },
         {
             title: 'CreditPathAI',
-            description: 'End-to-end Machine Learning system for predicting loan defaults and empowering data-driven lending decisions. Integrated with a real-time Streamlit dashboard.',
+            description: 'End-to-end Machine Learning system for predicting loan defaults in collaboration with Infosys Springboard. It has shown the highest results in the institution till now, proving its immense data-driven impact.',
             tags: ['Python', 'Machine Learning', 'Streamlit', 'Data Science'],
             url: 'https://github.com/springboardmentor891v/CreditPathAI_Oct_Batch/tree/pavan_doddavarapu',
-            color: 'from-emerald-500/20 to-teal-500/20'
+            color: 'from-emerald-500/20 to-teal-500/20',
+            image: '/projects/credit_path_ai.png'
         },
         {
             title: 'Smart Waste Management System',
-            description: 'IoT and Machine Learning based solution utilizing LSTM and Prophet models to predict waste accumulation patterns, optimizing collection routes and sustainability.',
+            description: 'IoT and ML-based solution utilizing LSTM/Prophet models to predict waste patterns. It was proudly presented at the HSC Pre Summit for the AI Impact Summit, India, by the LPU Media Team.',
             tags: ['IoT', 'Machine Learning', 'Python', 'LSTM', 'Prophet'],
             url: 'https://github.com/pavandoddavarapu/smart-waste-management-system',
-            color: 'from-purple-500/20 to-pink-500/20'
+            color: 'from-purple-500/20 to-pink-500/20',
+            image: '/projects/smart_waste_management.png'
         }
     ];
 
@@ -77,12 +80,21 @@ const Projects = () => {
                         className="group relative flex flex-col h-full rounded-3xl overflow-hidden glass border border-black/5 dark:border-white/5 hover:border-black/10 dark:border-white/20 transition-all duration-500 hover:-translate-y-2 bg-gradient-to-b from-white/[0.03] to-transparent"
                     >
                         {/* Glow Effect */}
-                        <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl`}></div>
+                        <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl pointer-events-none`}></div>
 
-                        <div className="relative p-8 flex flex-col h-full z-10">
-                            <div className="w-14 h-14 rounded-2xl bg-white/5 border border-black/5 dark:border-white/10 flex items-center justify-center mb-8 group-hover:bg-white/10 transition-colors">
-                                <Code2 className="text-gray-700 dark:text-gray-300 group-hover:text-blue-400 transition-colors" size={28} />
+                        {item.image && (
+                            <div className="relative w-full h-52 bg-black/20 overflow-hidden z-0 border-b border-black/5 dark:border-white/5">
+                                <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s] ease-out opacity-80 group-hover:opacity-100" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#f9fafb] dark:from-[#0a0a0a] to-transparent pointer-events-none opacity-80 dark:opacity-90"></div>
                             </div>
+                        )}
+
+                        <div className={`relative flex flex-col h-full z-10 ${item.image ? 'p-8 pt-2' : 'p-8'}`}>
+                            {!item.image && (
+                                <div className="w-14 h-14 rounded-2xl bg-white/5 border border-black/5 dark:border-white/10 flex items-center justify-center mb-8 group-hover:bg-white/10 transition-colors">
+                                    <Code2 className="text-gray-700 dark:text-gray-300 group-hover:text-blue-400 transition-colors" size={28} />
+                                </div>
+                            )}
 
                             <a href={item.url} target="_blank" rel="noopener noreferrer" className="inline-block w-fit">
                                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 hover:text-blue-400 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-500 transition-all duration-300 flex items-center gap-2 cursor-pointer">

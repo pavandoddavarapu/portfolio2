@@ -3,8 +3,8 @@ import { Award, Trophy, Medal, Star, Sparkles } from 'lucide-react';
 import { useState } from 'react';
 
 const awardsData = [
-    { title: "AU DevDayT20DSA Challenge — AlgoUniversity", rank: "Winner", icon: Trophy, color: "text-amber-500 dark:text-amber-400" },
-    { title: "Vibecode India Hackathon 2025 — Agentic AI (LangChain)", rank: "Runner Up", icon: Award, color: "text-yellow-500 dark:text-yellow-400" },
+    { title: "Vibecode India Hackathon 2025 — Agentic AI (LangChain)", rank: "Runner Up", icon: Trophy, color: "text-amber-500 dark:text-amber-400" },
+    { title: "AU DevDayT20DSA Challenge — AlgoUniversity", rank: "Winner", icon: Award, color: "text-yellow-500 dark:text-yellow-400" },
     { title: "Anomaly Hunter League Hackathon — School of CSE, ML, LPU", rank: "Winner", icon: Medal, color: "text-amber-500 dark:text-amber-400" }
 ];
 

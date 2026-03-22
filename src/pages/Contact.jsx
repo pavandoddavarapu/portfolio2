@@ -198,17 +198,31 @@ const Contact = () => {
                             </div>
                         </MagneticButton>
 
-                        <MagneticButton href="https://github.com/pavandoddavarapu">
+                        <MagneticButton href="https://codolio.com/profile/pavandoddavarapu">
                             <div className="flex items-center gap-4 p-4 rounded-2xl glass border border-black/5 dark:border-white/5 hover:bg-white/5 transition-colors group cursor-pointer w-full mt-4 block">
                                 <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Medium_logo_Monogram.svg" className="w-5 h-5 invert sepia saturate-0 hue-rotate-180 brightness-200 opacity-70 group-hover:opacity-100 transition-opacity" alt="Medium" />
+                                    <img src="https://codolio.com/codolio_assets/codolio.svg" className="w-6 h-6 opacity-70 group-hover:opacity-100 scale-110 transition-opacity" alt="Codolio" />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-gray-500 font-medium">Articles & Publications</p>
-                                    <p className="text-gray-900 dark:text-white font-bold group-hover:text-purple-400 transition-colors">github.com/pavandoddavarapu</p>
+                                    <p className="text-sm text-gray-500 font-medium">Coding Profile</p>
+                                    <p className="text-gray-900 dark:text-white font-bold group-hover:text-purple-400 transition-colors">codolio.com/profile/pavandoddavarapu</p>
                                 </div>
                             </div>
                         </MagneticButton>
+
+                        <MagneticButton href="https://leetcode.com/u/pavandodddavarapu7/">
+                            <div className="flex items-center gap-4 p-4 rounded-2xl glass border border-black/5 dark:border-white/5 hover:bg-white/5 transition-colors group cursor-pointer w-full mt-4 block">
+                                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" className="w-6 h-6 dark:invert opacity-70 group-hover:opacity-100 transition-opacity" alt="LeetCode" />
+                                </div>
+                                <div>
+                                    <p className="text-sm text-gray-500 font-medium">Algorithms Profile</p>
+                                    <p className="text-gray-900 dark:text-white font-bold group-hover:text-purple-400 transition-colors">leetcode.com/u/pavandodddavarapu7</p>
+                                </div>
+                            </div>
+                        </MagneticButton>
+
+
                     </div>
                 </motion.div>
             </div>

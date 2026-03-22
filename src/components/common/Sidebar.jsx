@@ -222,16 +222,21 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                             )}>
                                 <Linkedin size={20} />
                             </a>
-                            <a href="https://github.com/pavandoddavarapu" target="_blank" rel="noreferrer" className={cn(
-                                "p-2 transition-colors duration-300",
+
+                            <a href="https://codolio.com/profile/pavandoddavarapu" target="_blank" rel="noreferrer" className={cn(
+                                "p-2 transition-colors duration-300 flex items-center justify-center",
                                 theme === 'dark' ? "text-gray-600 dark:text-gray-400 hover:text-white" : "text-gray-500 hover:text-black"
                             )}>
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Medium_logo_Monogram.svg"
-                                    className={cn("w-5 h-5", theme === 'dark' ? 'invert sepia saturate-0 hue-rotate-180 brightness-200 opacity-80' : 'opacity-80 hover:opacity-100')}
-                                    alt="Medium"
-                                />
+                                <img src="https://codolio.com/codolio_assets/codolio.svg" className={cn("w-5 h-5", theme === 'dark' ? 'opacity-80 hover:opacity-100' : 'opacity-80 hover:opacity-100 scale-110')} alt="Codolio" />
                             </a>
+
+                            <a href="https://leetcode.com/u/pavandodddavarapu7/" target="_blank" rel="noreferrer" className={cn(
+                                "p-2 transition-colors duration-300 flex items-center justify-center",
+                                theme === 'dark' ? "text-gray-600 dark:text-gray-400 hover:text-white" : "text-gray-500 hover:text-black"
+                            )}>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" className={cn("w-5 h-5", theme === 'dark' ? 'invert opacity-80 hover:opacity-100' : 'opacity-80 hover:opacity-100')} alt="LeetCode" />
+                            </a>
+
                             <a href="mailto:pavandoddavarapu7@gmail.com" className={cn(
                                 "p-2 transition-colors duration-300",
                                 theme === 'dark' ? "text-gray-600 dark:text-gray-400 hover:text-white" : "text-gray-500 hover:text-black"

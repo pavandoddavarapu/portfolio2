@@ -20,7 +20,6 @@ const ALL_CERTS = [
     { id: 11, title: "Agentic-AI Applications", category: "AI & Cloud", issuer: "Programming Pathshala", link: "/certificates/1-081078bb-293d-4992-8d6c-f97a7d58ef6d.pdf" },
 
     // Core Tech & Development
-    { id: 12, title: "GeeksforGeeks Certification", category: "Core Tech & Dev", issuer: "GeeksforGeeks", link: "/certificates/GFG.pdf" },
     { id: 13, title: "Bits and Bytes of Computer Networking", category: "Core Tech & Dev", issuer: "Coursera", link: "/certificates/bits and bytes coursera.pdf" },
 
     // Soft Skills
@@ -160,14 +159,18 @@ const Certifications = () => {
                                             isDark ? "hover:bg-white/5 sm:border-black/5 dark:border-white/5" : "hover:bg-black/5 sm:border-gray-100"
                                         )}
                                     >
-                                        <div className="flex items-start gap-4">
-                                            {/* Minimal Bullet */}
-                                            <div className="mt-[6px] flex-shrink-0">
-                                                <div className={cn(
-                                                    "w-1.5 h-1.5 rounded-full transition-colors",
-                                                    isDark ? "bg-white/30 group-hover:bg-white/80" : "bg-black/30 group-hover:bg-black/80"
-                                                )} />
-                                            </div>
+                                        <div className="flex items-center gap-4">
+                                            {/* Certificate Thumbnail */}
+                                            {cert.link && (
+                                                <div className="flex-shrink-0 relative overflow-hidden rounded-md border border-black/5 dark:border-white/10 group-hover:border-blue-500/50 transition-colors bg-white w-14 h-10 sm:w-20 sm:h-14">
+                                                    <img
+                                                        src={cert.link.replace('/certificates/', '/certificates/thumbnails/').replace('.pdf', '.jpg')}
+                                                        alt={`${cert.title} thumbnail`}
+                                                        className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"
+                                                        loading="lazy"
+                                                    />
+                                                </div>
+                                            )}
 
                                             <div className="flex flex-col">
                                                 <h3 className={cn(

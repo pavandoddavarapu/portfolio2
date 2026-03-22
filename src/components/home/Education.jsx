@@ -30,9 +30,17 @@ const timelineData = [
     {
         year: 'Oct 2025 - Dec 2025',
         title: 'ML Intern',
-        company: 'Infosys Springboard, India',
+        company: 'Infosys Springboard, India (Remote)',
         description: 'Developed an end-to-end ML system for loan default prediction improving risk detection accuracy by ~30%. Built a real-time Streamlit credit risk web app and optimised model generalisation through cross-dataset validation.',
         icon: <Briefcase className="text-green-400 group-hover:text-green-300 transition-colors" size={24} />,
+        type: 'Internship'
+    },
+    {
+        year: 'Mar 2026 - Present',
+        title: 'MERN Stack Development Intern',
+        company: 'Webstack Academy, Bangalore (Remote)',
+        description: 'Selected for an intensive 4-week internship program building full-stack applications. Developed React frontends and Node.js/Express backends, implemented RESTful APIs, and integrated MongoDB databases.',
+        icon: <Briefcase className="text-emerald-400 group-hover:text-emerald-300 transition-colors" size={24} />,
         type: 'Internship'
     }
 ];
@@ -174,9 +182,6 @@ const Education = () => {
                         <div className="flex flex-col md:flex-row items-center gap-12 relative z-10">
                             {/* Left Side: Text and CTA */}
                             <div className="flex-1 text-center md:text-left">
-                                <div className="w-16 h-16 bg-[#020617] border border-black/5 dark:border-white/10 rounded-2xl flex items-center justify-center mb-6 shadow-lg mx-auto md:mx-0">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Medium_logo_Monogram.svg" className="w-8 h-8 invert opacity-80" alt="Medium" />
-                                </div>
                                 <h3 className="text-3xl lg:text-4xl font-black mb-4 bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-transparent">
                                     Open Source Developer | GitHub Projects
                                 </h3>
