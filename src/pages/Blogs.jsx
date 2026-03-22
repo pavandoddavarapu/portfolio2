@@ -101,7 +101,7 @@ const Blogs = () => {
                                     {post.tag}
                                 </span>
 
-                                <h2 className="text-2xl font-bold mb-4 text-gray-100 group-hover:text-white transition-colors leading-tight">
+                                <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100 group-hover:text-black dark:group-hover:text-white transition-colors leading-tight">
                                     {post.title}
                                 </h2>
 
@@ -128,7 +128,7 @@ const Blogs = () => {
                     <div className="relative z-10">
                         <BookOpen className="w-12 h-12 text-purple-400 mx-auto mb-6" />
                         <h2 className="text-3xl font-bold mb-4">Want more insights?</h2>
-                        <p className="text-gray-700 dark:text-gray-300 mb-8 max-w-xl mx-auto text-lg hover:text-white transition-colors">
+                        <p className="text-gray-700 dark:text-gray-300 mb-8 max-w-xl mx-auto text-lg group-hover:text-black dark:group-hover:text-white transition-colors">
                             Read my articles on building confidence from scratch, the silent power of discipline, and balancing dreams with deadlines.
                         </p>
                         <a

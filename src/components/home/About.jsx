@@ -70,8 +70,8 @@ const About = () => {
 
             {/* Infinite Marquee Strip */}
             <div className="mt-32 w-full py-8 border-y border-black/5 dark:border-white/10 bg-white/[0.02] flex overflow-hidden whitespace-nowrap relative">
-                <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#050505] to-transparent z-10"></div>
-                <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#050505] to-transparent z-10"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-gray-50 dark:from-[#050505] to-transparent z-10"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-gray-50 dark:from-[#050505] to-transparent z-10"></div>
 
                 <motion.div
                     animate={{ x: ["0%", "-50%"] }}
@@ -80,7 +80,7 @@ const About = () => {
                 >
                     {[...keywords, ...keywords, ...keywords].map((keyword, i) => (
                         <div key={i} className="flex items-center gap-4">
-                            <span className="text-3xl md:text-5xl font-black text-transparent bg-clip-text" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.2)' }}>
+                            <span className="text-3xl md:text-5xl font-black text-black/10 dark:text-white/20 transition-colors">
                                 {keyword}
                             </span>
                             <span className="w-3 h-3 rounded-full bg-blue-500/50"></span>

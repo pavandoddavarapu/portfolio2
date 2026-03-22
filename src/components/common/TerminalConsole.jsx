@@ -94,13 +94,13 @@ const TerminalConsole = () => {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 50, scale: 0.9 }}
                         transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                        className={`fixed z-[60] dark:bg-[#0a0a0a]/90 backdrop-blur-xl border border-gray-700/50 shadow-2xl overflow-hidden flex flex-col font-mono text-sm ${isMaximized
+                        className={`fixed z-[60] bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur-xl border border-gray-200 dark:border-gray-700/50 shadow-2xl overflow-hidden flex flex-col font-mono text-sm ${isMaximized
                             ? 'inset-4 md:inset-10 rounded-2xl'
                             : 'bottom-6 right-6 w-[90vw] md:w-[500px] h-[400px] rounded-xl'
                             }`}
                     >
                         {/* Header */}
-                        <div className="flex items-center justify-between px-4 py-3 bg-white/5 border-b border-black/5 dark:border-white/10 select-none">
+                        <div className="flex items-center justify-between px-4 py-3 bg-gray-100/50 dark:bg-white/5 border-b border-gray-200 dark:border-white/10 select-none">
                             <div className="flex gap-2">
                                 <button onClick={() => setIsOpen(false)} className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-400" />
                                 <button onClick={() => setIsMaximized(!isMaximized)} className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-400" />
@@ -113,25 +113,25 @@ const TerminalConsole = () => {
                         </div>
 
                         {/* Body */}
-                        <div className="flex-1 p-4 overflow-y-auto text-gray-700 dark:text-gray-300" onClick={() => inputRef.current?.focus()}>
+                        <div className="flex-1 p-4 overflow-y-auto text-gray-800 dark:text-gray-300" onClick={() => inputRef.current?.focus()}>
                             {history.map((line, i) => (
                                 <div key={i} className="mb-2 whitespace-pre-wrap">
                                     {line.type === "user" ? (
-                                        <span className="text-green-400">{line.content}</span>
+                                        <span className="text-green-600 dark:text-green-400 font-semibold">{line.content}</span>
                                     ) : (
                                         <span className="opacity-90">{line.content}</span>
                                     )}
                                 </div>
                             ))}
                             <div className="flex items-center gap-2 mt-2">
-                                <span className="text-green-400 shrink-0">Pavan@visitor:~$</span>
+                                <span className="text-green-600 dark:text-green-400 font-semibold shrink-0">Pavan@visitor:~$</span>
                                 <input
                                     ref={inputRef}
                                     type="text"
                                     value={input}
                                     onChange={(e) => setInput(e.target.value)}
                                     onKeyDown={handleCommand}
-                                    className="flex-1 bg-transparent outline-none border-none text-gray-800 dark:text-gray-200 caret-white"
+                                    className="flex-1 bg-transparent outline-none border-none text-gray-900 dark:text-gray-200 caret-black dark:caret-white"
                                     spellCheck="false"
                                     autoComplete="off"
                                 />

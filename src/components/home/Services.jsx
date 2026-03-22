@@ -48,15 +48,15 @@ const services = [
 
 const Services = () => {
     return (
-        <section className="py-24 relative overflow-hidden bg-[#0a0a0f]">
+        <section className="py-24 relative overflow-hidden bg-gray-50 dark:bg-[#0a0a0f] border-t border-gray-100 dark:border-white/5">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-1/3 h-[600px] bg-blue-600/5 blur-[150px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 w-1/2 h-[500px] bg-purple-600/5 blur-[150px] rounded-full pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">
-                    <span className="text-blue-400 font-semibold tracking-wider uppercase text-sm mb-3 block">What I Do</span>
-                    <h2 className="text-4xl md:text-5xl font-black mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                    <span className="text-blue-500 dark:text-blue-400 font-semibold tracking-wider uppercase text-sm mb-3 block">What I Do</span>
+                    <h2 className="text-4xl md:text-5xl font-black mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
                         Engineer Data. Build Systems. Deliver Insights.
                     </h2>
                     <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
@@ -73,13 +73,13 @@ const Services = () => {
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             whileHover={{ y: -5 }}
-                            className={`p-8 rounded-3xl glass border border-black/5 dark:border-white/5 transition-all duration-300 ${service.border} relative overflow-hidden`}
+                            className={`p-8 rounded-3xl glass border border-black/5 dark:border-white/5 transition-all duration-300 ${service.border} relative overflow-hidden bg-white/40 dark:bg-black/20`}
                         >
                             {/* Card top subtle gradient */}
                             <div className={`absolute top-0 left-0 right-0 h-32 bg-gradient-to-b ${service.color} opacity-50 pointer-events-none`}></div>
 
                             <div className="relative z-10">
-                                <div className="mb-6 p-4 rounded-full bg-white/5 inline-block backdrop-blur-md border border-black/5 dark:border-white/10">
+                                <div className="mb-6 p-4 rounded-full bg-white dark:bg-white/5 inline-block backdrop-blur-md shadow-sm dark:shadow-none border border-black/5 dark:border-white/10">
                                     {service.icon}
                                 </div>
 
@@ -93,7 +93,7 @@ const Services = () => {
                             </div>
 
                             {/* Decorative element on hover */}
-                            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl group-hover:bg-white/10 transition-colors"></div>
+                            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-black/5 dark:bg-white/5 rounded-full blur-2xl group-hover:bg-black/10 dark:group-hover:bg-white/10 transition-colors"></div>
                         </motion.div>
                     ))}
                 </div>

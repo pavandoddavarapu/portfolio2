@@ -69,14 +69,14 @@ const Navbar = () => {
                             >
                                 <span className={cn(
                                     "relative z-10 text-sm font-medium transition-colors duration-300",
-                                    isActive ? "text-white" : "text-gray-600 dark:text-gray-400 hover:text-white"
+                                    isActive ? "text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
                                 )}>
                                     {link.name}
                                 </span>
                                 {isActive && (
                                     <motion.div
                                         layoutId="nav-pill"
-                                        className="absolute inset-0 bg-white/10 rounded-full border border-black/5 dark:border-white/5"
+                                        className="absolute inset-0 bg-black/5 dark:bg-white/10 rounded-full border border-black/5 dark:border-white/5"
                                         transition={{ type: "spring", stiffness: 350, damping: 30 }}
                                     />
                                 )}
@@ -92,7 +92,7 @@ const Navbar = () => {
                     <MagneticButton>
                         <button
                             onClick={() => window.dispatchEvent(new CustomEvent('open-command-palette'))}
-                            className="mr-2 px-3 py-1.5 rounded-lg bg-white/5 border border-black/5 dark:border-white/10 hover:bg-white/10 transition-colors text-gray-600 dark:text-gray-400 hover:text-white flex items-center gap-2 text-xs font-mono"
+                            className="mr-2 px-3 py-1.5 rounded-lg bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-white flex items-center gap-2 text-xs font-mono"
                         >
                             <Search size={14} />
                             <span>Cmd K</span>
@@ -100,13 +100,13 @@ const Navbar = () => {
                     </MagneticButton>
 
                     <MagneticButton href="https://github.com/pavandoddavarapu">
-                        <div className="p-2 rounded-full hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-white">
+                        <div className="p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white">
                             <Github size={18} />
                         </div>
                     </MagneticButton>
 
                     <MagneticButton href="https://www.linkedin.com/in/pavandoddavarapu/">
-                        <div className="p-2 rounded-full hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-white">
+                        <div className="p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white">
                             <Linkedin size={18} />
                         </div>
                     </MagneticButton>

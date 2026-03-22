@@ -66,8 +66,8 @@ const TimelineCard = ({ item, isEven }) => {
                 </div>
             </div>
 
-            <h4 className="text-2xl font-bold mb-2 group-hover:text-white transition-colors text-gray-100 relative z-10">{item.title}</h4>
-            <h5 className="text-lg text-cyan-300/80 mb-4 font-medium relative z-10">{item.company}</h5>
+            <h4 className="text-2xl font-bold mb-2 group-hover:text-black dark:group-hover:text-white transition-colors text-gray-900 dark:text-gray-100 relative z-10">{item.title}</h4>
+            <h5 className="text-lg text-cyan-600 dark:text-cyan-300/80 mb-4 font-medium relative z-10">{item.company}</h5>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm md:text-base group-hover:text-gray-700 dark:text-gray-300 transition-colors relative z-10">
                 {item.description}
             </p>
@@ -182,7 +182,7 @@ const Education = () => {
                         <div className="flex flex-col md:flex-row items-center gap-12 relative z-10">
                             {/* Left Side: Text and CTA */}
                             <div className="flex-1 text-center md:text-left">
-                                <h3 className="text-3xl lg:text-4xl font-black mb-4 bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-transparent">
+                                <h3 className="text-3xl lg:text-4xl font-black mb-4 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-gray-100 dark:to-gray-400 bg-clip-text text-transparent">
                                     Open Source Developer | GitHub Projects
                                 </h3>
                                 <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-lg mx-auto md:mx-0 text-lg">

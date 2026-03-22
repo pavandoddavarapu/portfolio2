@@ -125,7 +125,7 @@ const AIChatbot = () => {
                         initial={{ opacity: 0, y: 50, scale: 0.9 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 50, scale: 0.9, transition: { duration: 0.2 } }}
-                        className="fixed bottom-6 right-6 z-[60] w-[90vw] md:w-[350px] h-[500px] bg-[#121212] border border-gray-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+                        className="fixed bottom-6 right-6 z-[60] w-[90vw] md:w-[350px] h-[500px] bg-white dark:bg-[#121212] border border-gray-200 dark:border-gray-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
                     >
                         {/* Header */}
                         <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-gray-900 dark:text-white">
@@ -139,17 +139,17 @@ const AIChatbot = () => {
                         </div>
 
                         {/* Messages Body */}
-                        <div className="flex-1 p-4 overflow-y-auto dark:bg-[#0a0a0a] flex flex-col gap-3">
+                        <div className="flex-1 p-4 overflow-y-auto bg-gray-50 dark:bg-[#0a0a0a] flex flex-col gap-3">
                             {messages.map((msg, idx) => (
                                 <div key={idx} className={`flex gap-2 max-w-[85%] ${msg.type === 'user' ? 'self-end flex-row-reverse' : 'self-start'}`}>
-                                    <div className={`p-2 rounded-xl text-sm ${msg.type === 'user' ? 'bg-blue-600 text-white rounded-tr-none' : 'bg-gray-800 text-gray-800 dark:text-gray-200 rounded-tl-none'}`}>
+                                    <div className={`p-2 rounded-xl text-sm ${msg.type === 'user' ? 'bg-blue-600 text-white rounded-tr-none' : 'bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-tl-none'}`}>
                                         {msg.text}
                                     </div>
                                 </div>
                             ))}
                             {isTyping && (
                                 <div className="flex gap-2 max-w-[85%] self-start">
-                                    <div className="bg-gray-800 p-3 rounded-xl rounded-tl-none flex items-center gap-1">
+                                    <div className="bg-gray-200 dark:bg-gray-800 p-3 rounded-xl rounded-tl-none flex items-center gap-1">
                                         <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
                                         <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
                                         <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
@@ -159,19 +159,25 @@ const AIChatbot = () => {
                             <div ref={messagesEndRef} />
                         </div>
 
-                        {/* Input Area */}
-                        <form onSubmit={handleSend} className="p-3 bg-[#121212] border-t border-gray-800 flex items-center gap-2">
-                            <input
-                                type="text"
-                                value={input}
-                                onChange={(e) => setInput(e.target.value)}
-                                placeholder="Ask about Pavan..."
-                                className="flex-1 bg-gray-900 border border-gray-700 text-sm text-gray-900 dark:text-white px-4 py-2 rounded-full focus:outline-none focus:border-blue-500"
-                            />
-                            <button type="submit" disabled={!input.trim()} className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
-                                <Send size={16} />
-                            </button>
-                        </form>
+                        {/* Input Footer */}
+                        <div className="p-3 bg-white dark:bg-[#121212] border-t border-gray-200 dark:border-gray-800">
+                            <form onSubmit={handleSend} className="flex gap-2">
+                                <input
+                                    type="text"
+                                    value={input}
+                                    onChange={(e) => setInput(e.target.value)}
+                                    placeholder="Ask about Pavan..."
+                                    className="flex-1 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white text-sm rounded-xl px-4 py-2 focus:outline-none focus:border-blue-500"
+                                />
+                                <button
+                                    type="submit"
+                                    disabled={!input.trim()}
+                                    className="p-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 dark:disabled:bg-gray-700 text-white rounded-xl transition-colors shrink-0"
+                                >
+                                    <Send size={16} />
+                                </button>
+                            </form>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

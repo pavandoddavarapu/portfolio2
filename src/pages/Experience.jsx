@@ -88,15 +88,15 @@ const Experience = () => {
 
                             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 relative z-10">
                                 <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-black/5 dark:border-white/10">
-                                        {exp.type === 'work' ? <Briefcase className="text-emerald-400" size={24} /> : exp.type === 'volunteer' ? <HandHeart className="text-rose-400" size={24} /> : <GraduationCap className="text-purple-400" size={24} />}
+                                    <div className="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 flex items-center justify-center border border-black/5 dark:border-white/10">
+                                        {exp.type === 'work' ? <Briefcase className="text-emerald-500 dark:text-emerald-400" size={24} /> : exp.type === 'volunteer' ? <HandHeart className="text-rose-500 dark:text-rose-400" size={24} /> : <GraduationCap className="text-purple-500 dark:text-purple-400" size={24} />}
                                     </div>
                                     <div>
                                         <h4 className="text-2xl font-bold text-gray-900 dark:text-white tracking-wide">{exp.role}</h4>
                                         <p className="text-gray-600 dark:text-gray-400 font-medium">{exp.company}</p>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-2 text-sm text-gray-500 font-mono bg-white/5 px-4 py-2 rounded-lg border border-black/5 dark:border-white/5">
+                                <div className="flex items-center gap-2 text-sm text-gray-500 font-mono bg-black/5 dark:bg-white/5 px-4 py-2 rounded-lg border border-black/5 dark:border-white/5">
                                     <Calendar size={14} /> {exp.period}
                                 </div>
                             </div>
@@ -114,15 +114,15 @@ const Experience = () => {
                                             href={link.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="group/link flex items-center gap-3 p-3 rounded-xl border border-black/5 dark:border-white/10 bg-white/5 hover:bg-white/10 hover:border-emerald-500/30 transition-all duration-300 w-full md:w-fit min-w-[300px]"
+                                            className="group/link flex items-center gap-3 p-3 rounded-xl border border-black/5 dark:border-white/10 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 hover:border-emerald-500/30 transition-all duration-300 w-full md:w-fit min-w-[300px]"
                                         >
-                                            <div className="p-1.5 rounded-md bg-emerald-500/10 text-emerald-400 group-hover/link:bg-emerald-500 group-hover/link:text-white transition-colors shrink-0">
+                                            <div className="p-1.5 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 group-hover/link:bg-emerald-500 group-hover/link:text-white transition-colors shrink-0">
                                                 <Link size={14} />
                                             </div>
-                                            <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover/link:text-white transition-colors truncate">
+                                            <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover/link:text-black dark:group-hover/link:text-white transition-colors truncate">
                                                 {link.label}
                                             </span>
-                                            <ExternalLink size={14} className="text-gray-500 group-hover/link:text-emerald-400 ml-auto transition-colors shrink-0" />
+                                            <ExternalLink size={14} className="text-gray-500 group-hover/link:text-emerald-600 dark:group-hover/link:text-emerald-400 ml-auto transition-colors shrink-0" />
                                         </a>
                                     ))}
                                 </div>
@@ -140,7 +140,7 @@ const Experience = () => {
 
                             <div className="flex flex-wrap gap-2 pt-6 border-t border-black/5 dark:border-white/5 relative z-10">
                                 {exp.skills.map((skill, idx) => (
-                                    <span key={idx} className="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-black/5 dark:border-white/10 text-gray-700 dark:text-gray-300">
+                                    <span key={idx} className="text-xs px-3 py-1.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 text-gray-700 dark:text-gray-300">
                                         {skill}
                                     </span>
                                 ))}

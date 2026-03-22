@@ -67,11 +67,7 @@ const Footer = () => {
                                     <Linkedin size={20} />
                                 </div>
                             </MagneticButton>
-                            <MagneticButton href="https://github.com/pavandoddavarapu">
-                                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/5 border border-black/5 dark:border-white/10 hover:bg-white/10 hover:border-blue-500/50 hover:text-blue-400 transition-all shadow-lg hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-                                    <span className="font-bold text-lg leading-none">M</span>
-                                </div>
-                            </MagneticButton>
+
                             <MagneticButton href="mailto:pavandoddavarapu7@gmail.com">
                                 <div className="p-3 rounded-full bg-white/5 border border-black/5 dark:border-white/10 hover:bg-white/10 hover:border-blue-500/50 hover:text-blue-400 transition-all shadow-lg hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]">
                                     <Mail size={20} />
