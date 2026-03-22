@@ -153,7 +153,7 @@ const Home = () => {
             <Skills />
             <Publications />
             <Awards />
-            <Languages />
+            {/* <Languages /> */}
             <Services />
 
         </PageWrapper >
