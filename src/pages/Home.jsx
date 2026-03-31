@@ -61,7 +61,7 @@ const Home = () => {
 
     return (
         <PageWrapper>
-            <div className="relative min-h-screen flex items-center justify-center pt-20 pb-10 overflow-hidden" ref={container}>
+            <div className="relative min-h-[100dvh] flex items-center justify-center pt-16 sm:pt-20 pb-10 overflow-hidden" ref={container}>
                 {/* 3D Background */}
                 <motion.div style={{ y: yBg }} className="absolute inset-0 z-0 opacity-40 md:opacity-50 pointer-events-none">
                     <Canvas camera={{ position: [0, 0, 8] }}>
@@ -72,7 +72,7 @@ const Home = () => {
                 </motion.div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 relative">
-                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
 
                         {/* Left Column: Text */}
                         <motion.div className="text-left font-sans">

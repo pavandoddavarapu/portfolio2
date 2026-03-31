@@ -1,9 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
-import { Sun, Moon, Github, Linkedin, Search } from 'lucide-react';
+import { Sun, Moon, Github, Linkedin, Search, Menu } from 'lucide-react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { useState } from 'react';
 import MagneticButton from './MagneticButton';
+import Sidebar from './Sidebar';
 import clsx from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -17,6 +18,7 @@ const Navbar = () => {
     const location = useLocation();
     const { scrollY } = useScroll();
     const [hidden, setHidden] = useState(false);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     // Hide navbar on scroll down, show on scroll up
     useMotionValueEvent(scrollY, "change", (latest) => {
@@ -37,110 +39,145 @@ const Navbar = () => {
     ];
 
     return (
-        <motion.nav
-            variants={{
-                visible: { y: 0, opacity: 1 },
-                hidden: { y: "-100%", opacity: 0 }
-            }}
-            animate={hidden ? "hidden" : "visible"}
-            transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="fixed top-6 left-0 right-0 z-50 flex justify-center w-full px-4 pointer-events-none"
-        >
-            <div className="glass pointer-events-auto rounded-full px-6 py-3 flex items-center gap-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] border border-black/5 dark:border-white/10 backdrop-blur-xl">
+        <>
+            <motion.nav
+                variants={{
+                    visible: { y: 0, opacity: 1 },
+                    hidden: { y: "-100%", opacity: 0 }
+                }}
+                animate={hidden ? "hidden" : "visible"}
+                transition={{ duration: 0.35, ease: "easeInOut" }}
+                className="fixed top-6 left-0 right-0 z-50 flex justify-center w-full px-4 pointer-events-none"
+            >
+                <div className="glass w-full sm:w-auto justify-between sm:justify-center pointer-events-auto rounded-[2rem] px-5 sm:px-6 py-3 flex items-center gap-4 sm:gap-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] border border-black/5 dark:border-white/10 backdrop-blur-xl">
 
-                {/* Logo Area */}
-                <MagneticButton>
-                    <Link to="/" className="text-xl font-black tracking-tighter bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-transparent px-2">
-                        P.
-                    </Link>
-                </MagneticButton>
-
-                <div className="w-px h-6 bg-white/10" />
-
-                {/* Primary Links */}
-                <div className="flex items-center gap-1 sm:gap-2">
-                    {navLinks.map((link) => {
-                        const isActive = location.pathname === link.path;
-                        return (
-                            <Link
-                                key={link.name}
-                                to={link.path}
-                                className="relative px-4 py-2"
-                            >
-                                <span className={cn(
-                                    "relative z-10 text-sm font-medium transition-colors duration-300",
-                                    isActive ? "text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
-                                )}>
-                                    {link.name}
-                                </span>
-                                {isActive && (
-                                    <motion.div
-                                        layoutId="nav-pill"
-                                        className="absolute inset-0 bg-black/5 dark:bg-white/10 rounded-full border border-black/5 dark:border-white/5"
-                                        transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                                    />
-                                )}
-                            </Link>
-                        );
-                    })}
-                </div>
-
-                <div className="w-px h-6 bg-white/10 hidden sm:block" />
-
-                {/* Socials / Actions */}
-                <div className="hidden sm:flex items-center gap-2">
+                    {/* Logo Area */}
                     <MagneticButton>
-                        <button
-                            onClick={() => window.dispatchEvent(new CustomEvent('open-command-palette'))}
-                            className="mr-2 px-3 py-1.5 rounded-lg bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-white flex items-center gap-2 text-xs font-mono"
+                        <Link to="/" className="relative text-2xl font-black tracking-tighter px-2 flex items-center justify-center group overflow-visible z-10 transition-transform hover:scale-110">
+                            <motion.span
+                                className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-transparent bg-[length:200%_auto]"
+                                animate={{ backgroundPosition: ['0% center', '200% center'] }}
+                                transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+                            >
+                                P.
+                            </motion.span>
+                            <motion.div
+                                className="absolute inset-0 bg-purple-500/30 blur-md rounded-full -z-10 opacity-0 group-hover:opacity-100"
+                                transition={{ duration: 0.3 }}
+                            />
+                        </Link>
+                    </MagneticButton>
+
+                    <div className="hidden sm:block w-px h-6 bg-white/10" />
+
+                    {/* Primary Links */}
+                    <div className="hidden sm:flex items-center gap-1 sm:gap-2">
+                        {navLinks.map((link) => {
+                            const isActive = location.pathname === link.path;
+                            return (
+                                <Link
+                                    key={link.name}
+                                    to={link.path}
+                                    className="relative px-4 py-2"
+                                >
+                                    <span className={cn(
+                                        "relative z-10 text-sm font-medium transition-colors duration-300",
+                                        isActive ? "text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                                    )}>
+                                        {link.name}
+                                    </span>
+                                    {isActive && (
+                                        <motion.div
+                                            layoutId="nav-pill"
+                                            className="absolute inset-0 bg-black/5 dark:bg-white/10 rounded-full border border-black/5 dark:border-white/5"
+                                            transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                                        />
+                                    )}
+                                </Link>
+                            );
+                        })}
+                    </div>
+
+                    <div className="w-px h-6 bg-white/10 hidden sm:block" />
+
+                    {/* Socials / Actions */}
+                    <div className="hidden sm:flex items-center gap-2">
+                        <MagneticButton>
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                onClick={() => window.dispatchEvent(new CustomEvent('open-command-palette'))}
+                                className="mr-2 px-3 py-1.5 rounded-lg bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-white flex items-center gap-2 text-xs font-mono"
+                            >
+                                <Search size={14} />
+                                <span>Cmd K</span>
+                            </motion.button>
+                        </MagneticButton>
+
+                        <MagneticButton href="https://github.com/pavandoddavarapu">
+                            <div className="p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white">
+                                <Github size={18} />
+                            </div>
+                        </MagneticButton>
+
+                        <MagneticButton href="https://www.linkedin.com/in/pavandoddavarapu/">
+                            <div className="p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white">
+                                <Linkedin size={18} />
+                            </div>
+                        </MagneticButton>
+
+                        <MagneticButton href="https://codolio.com/profile/pavandoddavarapu">
+                            <div className="p-2 rounded-full hover:bg-white/10 transition-colors">
+                                <img
+                                    src="https://codolio.com/codolio_assets/codolio.svg"
+                                    className={cn("w-[18px] h-[18px]", theme === 'dark' ? 'opacity-80' : 'opacity-80 scale-110')}
+                                    alt="Codolio"
+                                />
+                            </div>
+                        </MagneticButton>
+
+                        <MagneticButton href="https://leetcode.com/u/pavandodddavarapu7/">
+                            <div className="p-2 rounded-full hover:bg-white/10 transition-colors">
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                                    className={cn("w-[18px] h-[18px]", theme === 'dark' ? 'invert opacity-80' : 'opacity-80')}
+                                    alt="LeetCode"
+                                />
+                            </div>
+                        </MagneticButton>
+
+
+                        <MagneticButton onClick={toggleTheme}>
+                            <div className="p-2 rounded-full hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-white cursor-pointer">
+                                {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+                            </div>
+                        </MagneticButton>
+                    </div>
+
+                    {/* Mobile Menu Toggle */}
+                    <div className="flex sm:hidden items-center gap-2">
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={() => setIsSidebarOpen(true)}
+                            className="p-2 rounded-full bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white flex items-center justify-center cursor-pointer"
                         >
-                            <Search size={14} />
-                            <span>Cmd K</span>
-                        </button>
-                    </MagneticButton>
+                            <Menu size={20} />
+                        </motion.button>
+                        <motion.button
+                            whileHover={{ scale: 1.05, rotate: 15 }}
+                            whileTap={{ scale: 0.9, rotate: -15 }}
+                            onClick={toggleTheme}
+                            className="p-2 ml-2 rounded-full bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white flex items-center justify-center cursor-pointer"
+                        >
+                            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                        </motion.button>
+                    </div>
 
-                    <MagneticButton href="https://github.com/pavandoddavarapu">
-                        <div className="p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white">
-                            <Github size={18} />
-                        </div>
-                    </MagneticButton>
-
-                    <MagneticButton href="https://www.linkedin.com/in/pavandoddavarapu/">
-                        <div className="p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white">
-                            <Linkedin size={18} />
-                        </div>
-                    </MagneticButton>
-
-                    <MagneticButton href="https://codolio.com/profile/pavandoddavarapu">
-                        <div className="p-2 rounded-full hover:bg-white/10 transition-colors">
-                            <img
-                                src="https://codolio.com/codolio_assets/codolio.svg"
-                                className={cn("w-[18px] h-[18px]", theme === 'dark' ? 'opacity-80' : 'opacity-80 scale-110')}
-                                alt="Codolio"
-                            />
-                        </div>
-                    </MagneticButton>
-
-                    <MagneticButton href="https://leetcode.com/u/pavandodddavarapu7/">
-                        <div className="p-2 rounded-full hover:bg-white/10 transition-colors">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
-                                className={cn("w-[18px] h-[18px]", theme === 'dark' ? 'invert opacity-80' : 'opacity-80')}
-                                alt="LeetCode"
-                            />
-                        </div>
-                    </MagneticButton>
-
-
-                    <MagneticButton onClick={toggleTheme}>
-                        <div className="p-2 rounded-full hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-white cursor-pointer">
-                            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-                        </div>
-                    </MagneticButton>
                 </div>
-
-            </div>
-        </motion.nav >
+            </motion.nav >
+            <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} navLinks={navLinks} />
+        </>
     );
 };
 

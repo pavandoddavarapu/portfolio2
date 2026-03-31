@@ -4,6 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 const ClickSparkles = () => {
     const [sparkles, setSparkles] = useState([]);
 
+    // Don't render sparkles on touch/mobile devices
+    const isTouchDevice = typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches;
+    if (isTouchDevice) return null;
+
     useEffect(() => {
         const handleClick = (e) => {
             // Don't add sparkles on input elements or buttons that might have their own effects

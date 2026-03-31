@@ -11,7 +11,7 @@ const About = () => {
         <section className="py-32 relative z-10 w-full dark:bg-[#050505] overflow-hidden border-t border-black/5 dark:border-white/5">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <div className="flex flex-col md:flex-row gap-16 items-start justify-between">
+                <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start justify-between">
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -53,9 +53,9 @@ const About = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className="md:w-1/3 w-full"
+                        className="md:w-1/3 w-full order-first md:order-last"
                     >
-                        <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden transition-all duration-700 pointer-events-none relative">
+                        <div className="aspect-[3/2] md:aspect-[4/5] w-full rounded-2xl overflow-hidden transition-all duration-700 pointer-events-none relative">
                             <img
                                 src="/pavan_real.jpg"
                                 alt="Studio Profile"

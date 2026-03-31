@@ -58,11 +58,11 @@ const Projects = () => {
                     Portfolio
                 </h2>
 
-                <h3 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.1] mb-6 tracking-tight text-gray-900 dark:text-white">
+                <h3 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.1] mb-6 tracking-tight text-gray-900 dark:text-white">
                     Selected <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Works.</span>
                 </h3>
 
-                <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed font-light max-w-2xl mx-auto md:mx-0">
+                <p className="text-base sm:text-xl text-gray-600 dark:text-gray-400 leading-relaxed font-light max-w-2xl mx-auto md:mx-0">
                     A collection of scalable web applications, data engineering models, and creative frontend architectures built with modern frameworks.
                 </p>
             </motion.div>
@@ -116,9 +116,13 @@ const Projects = () => {
 
                             <div className="border-t border-black/5 dark:border-white/10 pt-6">
                                 <MagneticButton href={item.url}>
-                                    <div className="inline-flex items-center justify-center w-full gap-2 px-6 py-3 rounded-full bg-white text-black font-bold text-sm hover:scale-105 transition-transform duration-300">
+                                    <motion.div
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        className="inline-flex items-center justify-center w-full gap-2 px-6 py-3 rounded-full bg-white text-black font-bold text-sm"
+                                    >
                                         <Github size={18} /> View Source Code
-                                    </div>
+                                    </motion.div>
                                 </MagneticButton>
                             </div>
                         </div>
@@ -134,9 +138,13 @@ const Projects = () => {
                 className="mt-20 flex justify-center pb-10"
             >
                 <MagneticButton href="https://github.com/pavandoddavarapu">
-                    <div className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 text-gray-900 dark:text-white font-bold hover:bg-black/10 dark:hover:bg-white/10 hover:border-black/10 dark:hover:border-white/20 transition-all duration-300">
+                    <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 text-gray-900 dark:text-white font-bold hover:bg-black/10 dark:hover:bg-white/10 hover:border-black/10 dark:hover:border-white/20 transition-colors duration-300"
+                    >
                         <Github size={20} /> View More on GitHub
-                    </div>
+                    </motion.div>
                 </MagneticButton>
             </motion.div>
         </PageWrapper>

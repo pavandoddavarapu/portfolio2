@@ -58,12 +58,12 @@ const Contact = () => {
                     <span className="w-12 h-px bg-purple-500"></span>
                 </h2>
 
-                <h3 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.1] mb-6 tracking-tight text-gray-900 dark:text-white">
+                <h3 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.1] mb-6 tracking-tight text-gray-900 dark:text-white">
                     Let's Build <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Together.</span>
                 </h3>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 max-w-5xl mx-auto w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 max-w-5xl mx-auto w-full">
 
                 {/* Form Section */}
                 <motion.div
@@ -133,16 +133,18 @@ const Contact = () => {
                                 </label>
                             </div>
 
-                            <button
+                            <motion.button
+                                whileHover={!status.loading ? { scale: 1.02 } : {}}
+                                whileTap={!status.loading ? { scale: 0.98 } : {}}
                                 type="submit"
                                 disabled={status.loading}
-                                className={`w-full relative overflow-hidden group py-4 px-6 rounded-2xl font-bold text-lg transition-all ${status.loading ? 'bg-white/10 text-gray-600 dark:text-gray-400 cursor-not-allowed' : 'bg-white text-black hover:scale-[1.02]'}`}
+                                className={`w-full relative overflow-hidden group py-4 px-6 rounded-2xl font-bold text-lg transition-all ${status.loading ? 'bg-white/10 text-gray-600 dark:text-gray-400 cursor-not-allowed' : 'bg-white text-black'}`}
                             >
                                 <span className="relative z-10 flex items-center justify-center gap-2">
                                     {status.loading ? 'Transmitting...' : 'Send Message'}
                                     {!status.loading && <Send size={18} className="group-hover:translate-x-1 transition-transform" />}
                                 </span>
-                            </button>
+                            </motion.button>
                         </form>
                     </div>
                 </motion.div>
@@ -169,7 +171,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500 font-medium">Direct Email</p>
-                                    <p className="text-gray-900 dark:text-white font-bold group-hover:text-purple-400 transition-colors">pavandoddavarapu7@gmail.com</p>
+                                    <p className="text-gray-900 dark:text-white font-bold group-hover:text-purple-400 transition-colors truncate">pavandoddavarapu7@gmail.com</p>
                                 </div>
                             </div>
                         </MagneticButton>
@@ -181,7 +183,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500 font-medium">Architecture & Code</p>
-                                    <p className="text-gray-900 dark:text-white font-bold group-hover:text-purple-400 transition-colors">github.com/pavandoddavarapu</p>
+                                    <p className="text-gray-900 dark:text-white font-bold group-hover:text-purple-400 transition-colors truncate">github.com/pavandoddavarapu</p>
                                 </div>
                             </div>
                         </MagneticButton>
@@ -193,7 +195,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500 font-medium">Professional Network</p>
-                                    <p className="text-gray-900 dark:text-white font-bold group-hover:text-purple-400 transition-colors">linkedin.com/in/pavandoddavarapu</p>
+                                    <p className="text-gray-900 dark:text-white font-bold group-hover:text-purple-400 transition-colors truncate">linkedin.com/in/pavandoddavarapu</p>
                                 </div>
                             </div>
                         </MagneticButton>
@@ -205,7 +207,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500 font-medium">Coding Profile</p>
-                                    <p className="text-gray-900 dark:text-white font-bold group-hover:text-purple-400 transition-colors">codolio.com/profile/pavandoddavarapu</p>
+                                    <p className="text-gray-900 dark:text-white font-bold group-hover:text-purple-400 transition-colors truncate">codolio.com/profile/pavandoddavarapu</p>
                                 </div>
                             </div>
                         </MagneticButton>
@@ -217,7 +219,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500 font-medium">Algorithms Profile</p>
-                                    <p className="text-gray-900 dark:text-white font-bold group-hover:text-purple-400 transition-colors">leetcode.com/u/pavandodddavarapu7</p>
+                                    <p className="text-gray-900 dark:text-white font-bold group-hover:text-purple-400 transition-colors truncate">leetcode.com/u/pavandodddavarapu7</p>
                                 </div>
                             </div>
                         </MagneticButton>

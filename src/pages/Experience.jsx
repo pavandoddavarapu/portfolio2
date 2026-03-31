@@ -52,7 +52,7 @@ const Experience = () => {
                         Work Experience
                     </h2>
 
-                    <h3 className="text-5xl sm:text-6xl font-black leading-[1.1] tracking-tight text-gray-900 dark:text-white mb-4">
+                    <h3 className="text-4xl sm:text-5xl sm:text-6xl font-black leading-[1.1] tracking-tight text-gray-900 dark:text-white mb-4">
                         Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">Journey.</span>
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 font-light text-lg max-w-xl">
@@ -60,15 +60,19 @@ const Experience = () => {
                     </p>
                 </div>
 
-                <MagneticButton href="/resume.pdf" download="Khush_Resume.pdf">
-                    <div className="flex items-center gap-3 glass px-8 py-4 rounded-2xl border border-emerald-500/30 hover:bg-emerald-500/10 text-emerald-400 font-bold tracking-wide transition-all hover:scale-105 group">
-                        <Download size={20} className="group-hover:translate-y-1 transition-transform" />
+                <MagneticButton href="/resume.pdf" download="Pavan_Resume.pdf">
+                    <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="flex items-center gap-3 glass px-8 py-4 rounded-2xl border border-emerald-500/30 hover:bg-emerald-500/10 text-emerald-400 font-bold tracking-wide transition-colors duration-300 group"
+                    >
+                        <Download size={20} className="group-hover:-translate-y-1 transition-transform" />
                         Download Resumé
-                    </div>
+                    </motion.div>
                 </MagneticButton>
             </motion.div>
 
-            <div className="relative border-l-2 border-black/5 dark:border-white/10 ml-4 md:ml-10 space-y-16">
+            <div className="relative border-l-2 border-black/5 dark:border-white/10 ml-4 sm:ml-10 space-y-12 sm:space-y-16">
                 {experiences.map((exp, index) => (
                     <motion.div
                         key={index}
@@ -81,7 +85,7 @@ const Experience = () => {
                         {/* Timeline Dot */}
                         <div className={`absolute -left-[11px] top-0 w-5 h-5 rounded-full border-4 border-[#050505] z-10 ${exp.type === 'work' ? 'bg-emerald-500' : exp.type === 'volunteer' ? 'bg-rose-500' : 'bg-purple-500'}`}></div>
 
-                        <div className="glass p-8 rounded-3xl border border-black/5 dark:border-white/5 hover:border-black/10 dark:border-white/20 transition-all duration-300 relative overflow-hidden bg-gradient-to-br from-white/[0.02] to-transparent">
+                        <div className="glass p-5 sm:p-8 rounded-3xl border border-black/5 dark:border-white/5 hover:border-black/10 dark:border-white/20 transition-all duration-300 relative overflow-hidden bg-gradient-to-br from-white/[0.02] to-transparent">
 
                             {/* Ambient Glow Based on Type */}
                             <div className={`absolute top-0 right-0 w-64 h-64 blur-3xl opacity-0 group-hover:opacity-10 transition-opacity duration-700 pointer-events-none ${exp.type === 'work' ? 'bg-emerald-500' : exp.type === 'volunteer' ? 'bg-rose-500' : 'bg-purple-500'}`}></div>
@@ -92,7 +96,7 @@ const Experience = () => {
                                         {exp.type === 'work' ? <Briefcase className="text-emerald-500 dark:text-emerald-400" size={24} /> : exp.type === 'volunteer' ? <HandHeart className="text-rose-500 dark:text-rose-400" size={24} /> : <GraduationCap className="text-purple-500 dark:text-purple-400" size={24} />}
                                     </div>
                                     <div>
-                                        <h4 className="text-2xl font-bold text-gray-900 dark:text-white tracking-wide">{exp.role}</h4>
+                                        <h4 className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-white tracking-wide">{exp.role}</h4>
                                         <p className="text-gray-600 dark:text-gray-400 font-medium">{exp.company}</p>
                                     </div>
                                 </div>
@@ -109,12 +113,14 @@ const Experience = () => {
                                 <div className="flex flex-col gap-3 mb-8 relative z-10">
                                     <p className="text-xs uppercase tracking-widest text-emerald-500 font-semibold mb-2 ml-1">Highlights</p>
                                     {exp.links.map((link, idx) => (
-                                        <a
+                                        <motion.a
+                                            whileHover={{ scale: 1.02 }}
+                                            whileTap={{ scale: 0.98 }}
                                             key={idx}
                                             href={link.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="group/link flex items-center gap-3 p-3 rounded-xl border border-black/5 dark:border-white/10 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 hover:border-emerald-500/30 transition-all duration-300 w-full md:w-fit min-w-[300px]"
+                                            className="group/link flex items-center gap-3 p-3 rounded-xl border border-black/5 dark:border-white/10 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 hover:border-emerald-500/30 transition-colors duration-300 w-full"
                                         >
                                             <div className="p-1.5 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 group-hover/link:bg-emerald-500 group-hover/link:text-white transition-colors shrink-0">
                                                 <Link size={14} />
@@ -123,7 +129,7 @@ const Experience = () => {
                                                 {link.label}
                                             </span>
                                             <ExternalLink size={14} className="text-gray-500 group-hover/link:text-emerald-600 dark:group-hover/link:text-emerald-400 ml-auto transition-colors shrink-0" />
-                                        </a>
+                                        </motion.a>
                                     ))}
                                 </div>
                             )}

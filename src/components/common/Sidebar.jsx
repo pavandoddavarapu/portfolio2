@@ -43,7 +43,7 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={onClose}
-                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100]"
+                        className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[100]"
                     />
 
                     {/* Sidebar Panel */}
@@ -53,8 +53,8 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                         exit={{ x: '-100%' }}
                         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
                         className={cn(
-                            "fixed top-0 left-0 h-[100dvh] w-[320px] max-w-[85vw] backdrop-blur-3xl shadow-2xl z-[110] p-6 flex flex-col overflow-y-auto",
-                            theme === 'dark' ? "dark:bg-[#0a0a0a]/90 border-r border-black/5 dark:border-white/10" : "bg-white/90 border-r border-black/10"
+                            "fixed top-0 left-0 h-[100dvh] w-[320px] max-w-[85vw] backdrop-blur-[40px] backdrop-saturate-[150%] shadow-2xl z-[110] p-6 flex flex-col overflow-y-auto transition-colors duration-500",
+                            theme === 'dark' ? "bg-black/40 border-r border-white/10 shadow-[inset_0_0_80px_rgba(0,0,0,0.5),_0_0_40px_rgba(0,0,0,0.5)]" : "bg-white/40 border-r border-white/50 shadow-[inset_0_0_80px_rgba(255,255,255,0.5),_0_0_40px_rgba(0,0,0,0.1)]"
                         )}
                     >
                         {/* Header */}
@@ -91,8 +91,8 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                                         className={cn(
                                             "px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-between group relative overflow-hidden",
                                             isActive
-                                                ? (theme === 'dark' ? "bg-white/10 text-white" : "bg-black/5 text-black font-semibold")
-                                                : (theme === 'dark' ? "text-gray-600 dark:text-gray-400 hover:bg-white/5 hover:text-white" : "text-gray-600 hover:bg-black/5 hover:text-black")
+                                                ? (theme === 'dark' ? "bg-white/10 border border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] text-white" : "bg-white/60 border border-white/60 shadow-[inset_0_1px_1px_rgba(255,255,255,0.8)] text-black font-bold")
+                                                : (theme === 'dark' ? "border border-transparent text-gray-400 hover:bg-white/5 hover:border-white/5 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)] hover:text-white" : "border border-transparent text-gray-600 hover:bg-white/40 hover:border-white/40 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] hover:text-black")
                                         )}
                                     >
                                         <span className="relative z-10 font-medium">{link.name}</span>
@@ -116,8 +116,8 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                                 download="Pavan_Resume.pdf"
                                 onClick={onClose}
                                 className={cn(
-                                    "flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-left group",
-                                    theme === 'dark' ? "text-gray-600 dark:text-gray-400 hover:bg-white/5 hover:text-white" : "text-gray-600 hover:bg-black/5 hover:text-black"
+                                    "flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-left group border border-transparent",
+                                    theme === 'dark' ? "text-gray-400 hover:bg-white/5 hover:border-white/5 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)] hover:text-white" : "text-gray-600 hover:bg-white/40 hover:border-white/40 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] hover:text-black"
                                 )}
                             >
                                 <Download size={18} className="group-hover:-translate-y-0.5 transition-transform" />
@@ -131,8 +131,8 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                                     onClose();
                                 }}
                                 className={cn(
-                                    "flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-left group",
-                                    theme === 'dark' ? "text-gray-600 dark:text-gray-400 hover:bg-white/5 hover:text-white" : "text-gray-600 hover:bg-black/5 hover:text-black"
+                                    "flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-left group border border-transparent",
+                                    theme === 'dark' ? "text-gray-400 hover:bg-white/5 hover:border-white/5 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)] hover:text-white" : "text-gray-600 hover:bg-white/40 hover:border-white/40 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] hover:text-black"
                                 )}
                             >
                                 <LayoutTemplate size={18} className="group-hover:scale-110 transition-transform" />
@@ -141,15 +141,17 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                             </button>
 
                             <div className={cn(
-                                "flex flex-col gap-3 p-4 rounded-xl mt-4 border",
-                                theme === 'dark' ? "bg-white/5 border-black/5 dark:border-white/10" : "bg-black/5 border-black/10"
+                                "flex flex-col gap-3 p-4 rounded-xl mt-4 shadow-sm",
+                                theme === 'dark' ? "bg-white/[0.03] border border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]" : "bg-white/40 border border-white/50 shadow-[inset_0_1px_1px_rgba(255,255,255,0.5)]"
                             )}>
                                 <div className="flex items-center justify-between">
                                     <div className={cn("flex items-center gap-3 font-medium cursor-default", theme === 'dark' ? "text-gray-800 dark:text-gray-200" : "text-gray-800")}>
                                         <Settings size={16} />
                                         <span>Preferences</span>
                                     </div>
-                                    <button
+                                    <motion.button
+                                        whileHover={{ scale: 1.05, rotate: 15 }}
+                                        whileTap={{ scale: 0.9, rotate: -15 }}
                                         onClick={toggleTheme}
                                         className={cn(
                                             "p-2 rounded-lg transition-colors flex items-center justify-center cursor-pointer",
@@ -158,7 +160,7 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                                         title="Toggle Theme"
                                     >
                                         {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
-                                    </button>
+                                    </motion.button>
                                 </div>
 
                                 <div className="h-px w-full bg-gradient-to-r from-transparent via-gray-500/20 to-transparent my-1" />
@@ -168,7 +170,9 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                                         <Sparkles size={15} />
                                         <span>Animations</span>
                                     </div>
-                                    <button
+                                    <motion.button
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
                                         onClick={() => setAnimationsEnabled(!animationsEnabled)}
                                         className={cn(
                                             "w-10 h-6 rounded-full p-1 transition-colors duration-300 ease-in-out cursor-pointer",
@@ -180,7 +184,7 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                                             animate={{ x: animationsEnabled ? 16 : 0 }}
                                             transition={{ type: "spring", stiffness: 500, damping: 30 }}
                                         />
-                                    </button>
+                                    </motion.button>
                                 </div>
 
                                 <div className="flex items-center justify-between">
@@ -188,7 +192,9 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                                         <Volume2 size={15} />
                                         <span>Sound Effects</span>
                                     </div>
-                                    <button
+                                    <motion.button
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
                                         onClick={() => setSoundEnabled(!soundEnabled)}
                                         className={cn(
                                             "w-10 h-6 rounded-full p-1 transition-colors duration-300 ease-in-out cursor-pointer",
@@ -200,7 +206,7 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                                             animate={{ x: soundEnabled ? 16 : 0 }}
                                             transition={{ type: "spring", stiffness: 500, damping: 30 }}
                                         />
-                                    </button>
+                                    </motion.button>
                                 </div>
                             </div>
                         </div>
@@ -208,7 +214,7 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                         {/* Footer Socials */}
                         <div className={cn(
                             "mt-8 pt-6 border-t flex justify-center gap-4",
-                            theme === 'dark' ? "border-black/5 dark:border-white/10" : "border-black/10"
+                            theme === 'dark' ? "border-white/10" : "border-black/10"
                         )}>
                             <a href="https://github.com/pavandoddavarapu" target="_blank" rel="noreferrer" className={cn(
                                 "p-2 transition-colors duration-300",
