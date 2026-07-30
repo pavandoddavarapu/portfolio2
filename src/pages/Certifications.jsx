@@ -7,35 +7,20 @@ import { cn } from '../components/common/Navbar';
 // Standardized list without extraneous icons to keep it ultra-clean
 const ALL_CERTS = [
     // AI & Cloud
-    { id: 1, title: "Deep Learning for Developers", category: "AI & Cloud", issuer: "DeepLearning.AI", link: "/certificates/Deep Learning for Developers.pdf" },
-    { id: 2, title: "Generative Models for Developers", category: "AI & Cloud", issuer: "DeepLearning.AI", link: "/certificates/Generative models for developers.pdf" },
-    { id: 3, title: "Introduction to OpenAI GPT Models", category: "AI & Cloud", issuer: "Coursera", link: "/certificates/Introduction to OpenAI GPT Models.pdf" },
-    { id: 4, title: "OpenAI GPT-3 for Developers", category: "AI & Cloud", issuer: "DeepLearning.AI", link: "/certificates/OpenAI Generative Pre-trained Transformer 3 (GPT-3) for developers.pdf" },
-    { id: 5, title: "Computer Vision 101", category: "AI & Cloud", issuer: "Institution", link: "/certificates/computer vision 101.pdf" },
-    { id: 6, title: "Introduction to Deep Learning", category: "AI & Cloud", issuer: "Institution", link: "/certificates/introduction to deeplearning.pdf" },
-    { id: 7, title: "Natural Language Processing (NLP)", category: "AI & Cloud", issuer: "Institution", link: "/certificates/nlp.pdf" },
-    { id: 8, title: "Artificial Intelligence Fundamentals", category: "AI & Cloud", issuer: "Institution", link: "/certificates/ai.pdf" },
-    { id: 9, title: "Introduction to Data Science", category: "AI & Cloud", issuer: "Institution", link: "/certificates/introduction to datascience.pdf" },
-    { id: 10, title: "Cloud Computing", category: "AI & Cloud", issuer: "NPTEL", link: "/certificates/12305446_MOOC_CCZYZV4Certificate (1).pdf" },
-    { id: 11, title: "Agentic-AI Applications", category: "AI & Cloud", issuer: "Programming Pathshala", link: "/certificates/1-081078bb-293d-4992-8d6c-f97a7d58ef6d.pdf" },
+    { id: 1,  title: "Oracle AI Foundations Associate",             category: "AI & Cloud",        issuer: "Oracle",             link: "/certificates/oracle ai certificate.pdf" },
+    { id: 2,  title: "Deep Learning for Developers",                category: "AI & Cloud",        issuer: "DeepLearning.AI",    link: "/certificates/Deep Learning for Developers.pdf" },
+    { id: 3,  title: "Generative Models for Developers",            category: "AI & Cloud",        issuer: "DeepLearning.AI",    link: "/certificates/Generative models for developers.pdf" },
+    { id: 4,  title: "Introduction to OpenAI GPT Models",           category: "AI & Cloud",        issuer: "Coursera",           link: "/certificates/Introduction to OpenAI GPT Models.pdf" },
+    { id: 5,  title: "OpenAI GPT-3 for Developers",                 category: "AI & Cloud",        issuer: "DeepLearning.AI",    link: "/certificates/OpenAI Generative Pre-trained Transformer 3 (GPT-3) for developers.pdf" },
+    { id: 6,  title: "Cloud Computing",                             category: "AI & Cloud",        issuer: "NPTEL",              link: "/certificates/12305446_MOOC_CCZYZV4Certificate (1).pdf" },
+    { id: 7,  title: "Agentic-AI Applications",                     category: "AI & Cloud",        issuer: "Programming Pathshala", link: "/certificates/1-081078bb-293d-4992-8d6c-f97a7d58ef6d.pdf" },
 
     // Core Tech & Development
-    { id: 13, title: "Bits and Bytes of Computer Networking", category: "Core Tech & Dev", issuer: "Coursera", link: "/certificates/bits and bytes coursera.pdf" },
-
-    // Soft Skills
-    { id: 14, title: "Time Management", category: "Soft Skills", issuer: "Institution", link: "/certificates/time management.pdf" },
-
-    // Additional Certifications
-    { id: 15, title: "Coursera Specialization (WX3D)", category: "Various Certifications", issuer: "Coursera", link: "/certificates/Coursera WX3DXC5IRR5V.pdf" },
-    { id: 16, title: "Coursera Specialization (YG69)", category: "Various Certifications", issuer: "Coursera", link: "/certificates/Coursera YG69ZHXRKX9H.pdf" },
-    { id: 17, title: "Coursera Certification (DM40)", category: "Various Certifications", issuer: "Coursera", link: "/certificates/Coursera DM40HDVS9EQX.pdf" },
-    { id: 18, title: "Coursera Certification (N5UT)", category: "Various Certifications", issuer: "Coursera", link: "/certificates/Coursera N5UTJYUNC2H5.pdf" },
-    { id: 19, title: "Coursera Certification (NQSP)", category: "Various Certifications", issuer: "Coursera", link: "/certificates/Coursera NQSPQLP749DR.pdf" },
-    { id: 20, title: "Coursera Certification (R4IX)", category: "Various Certifications", issuer: "Coursera", link: "/certificates/Coursera R4IXPMHB8EY7.pdf" },
-    { id: 21, title: "Coursera Certification (RP25)", category: "Various Certifications", issuer: "Coursera", link: "/certificates/Coursera RP25L6WLGX7A.pdf" },
+    { id: 8,  title: "Oracle Database Foundations (DBMS)",          category: "Core Tech & Dev",   issuer: "Oracle",             link: "/certificates/oracle dbms certificate.pdf" },
+    { id: 9,  title: "Bits and Bytes of Computer Networking",       category: "Core Tech & Dev",   issuer: "Coursera (Google)",  link: "/certificates/bits and bytes coursera.pdf" },
 ];
 
-const CATEGORIES = ["AI & Cloud", "Core Tech & Dev", "Soft Skills", "Various Certifications"];
+const CATEGORIES = ["AI & Cloud", "Core Tech & Dev"];
 
 const Certifications = () => {
     const { theme } = useTheme();
@@ -90,7 +75,7 @@ const Certifications = () => {
                         "text-base mt-2",
                         isDark ? "text-gray-600 dark:text-gray-400" : "text-gray-500"
                     )}>
-                        A consolidated record of {ALL_CERTS.length} professional achievements, courses, and event participations.
+                        A consolidated record of {ALL_CERTS.length} professional certifications from industry-leading institutions.
                     </p>
                 </div>
 
