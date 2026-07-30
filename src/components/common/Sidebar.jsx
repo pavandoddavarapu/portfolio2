@@ -233,10 +233,7 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                                 "p-2 transition-colors duration-300 flex items-center justify-center",
                                 theme === 'dark' ? "text-gray-400 hover:text-white" : "text-gray-500 hover:text-black"
                             )}>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                                    <path d="M16 18l6-6-6-6" />
-                                    <path d="M8 6l-6 6 6 6" />
-                                </svg>
+                                <img src="/codolio.svg" className="w-5 h-5 opacity-90 hover:opacity-100" alt="Codolio" />
                             </a>
 
                             <a href="https://leetcode.com/u/pavandodddavarapu7/" target="_blank" rel="noreferrer" className={cn(
