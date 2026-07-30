@@ -3,12 +3,12 @@ import { BookOpen, FileText, ExternalLink, Sparkles } from 'lucide-react';
 
 const publicationsData = [
     {
-        title: "Accepted Research Paper & Upcoming Conference Presentation",
-        description: "Official research paper accepted for publication. Excitingly scheduled for a conference presentation on April 24th.",
+        title: "Published Research Paper — IEEE Conference",
+        description: "Research paper officially published. Presented at conference on April 24th. The work contributes novel findings to the academic and research community.",
         icon: FileText,
         color: "text-blue-500 dark:text-blue-400",
         link: "/IEEE.pdf",
-        type: "Conference Paper"
+        type: "Published Paper"
     }
 ];
 

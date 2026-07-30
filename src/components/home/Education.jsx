@@ -23,7 +23,7 @@ const timelineData = [
         year: 'Aug 2023 - Jul 2027',
         title: 'B.Tech, Computer Science Engineering',
         company: 'Lovely Professional University, Phagwara, Punjab',
-        description: 'Pursuing B.Tech CSE with a CGPA of 8.49. Active participant in hackathons, AI challenges, and the ML/AI community at LPU.',
+        description: 'Pursuing B.Tech CSE with a CGPA of 8.59. Active participant in hackathons, AI challenges, and the ML/AI community at LPU.',
         icon: <Code className="text-purple-400 group-hover:text-purple-300 transition-colors" size={24} />,
         type: 'Education'
     },
