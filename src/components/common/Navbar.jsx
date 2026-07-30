@@ -127,12 +127,11 @@ const Navbar = () => {
                         </MagneticButton>
 
                         <MagneticButton href="https://codolio.com/profile/pavandoddavarapu">
-                            <div className="p-2 rounded-full hover:bg-white/10 transition-colors">
-                                <img
-                                    src="https://codolio.com/codolio_assets/codolio.svg"
-                                    className={cn("w-[18px] h-[18px]", theme === 'dark' ? 'opacity-80' : 'opacity-80 scale-110')}
-                                    alt="Codolio"
-                                />
+                            <div className="p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white" title="Codolio Profile">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px]">
+                                    <path d="M16 18l6-6-6-6" />
+                                    <path d="M8 6l-6 6 6 6" />
+                                </svg>
                             </div>
                         </MagneticButton>
 
