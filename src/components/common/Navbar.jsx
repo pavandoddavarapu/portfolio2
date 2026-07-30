@@ -107,7 +107,7 @@ const Navbar = () => {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 onClick={() => window.dispatchEvent(new CustomEvent('open-command-palette'))}
-                                className="mr-2 px-3 py-1.5 rounded-lg bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-white flex items-center gap-2 text-xs font-mono"
+                                className="mr-2 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white flex items-center gap-2 text-xs font-mono"
                             >
                                 <Search size={14} />
                                 <span>Cmd K</span>
