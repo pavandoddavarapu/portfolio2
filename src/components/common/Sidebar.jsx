@@ -229,18 +229,24 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                                 <Linkedin size={20} />
                             </a>
 
-                            <a href="https://codolio.com/profile/pavandoddavarapu" target="_blank" rel="noreferrer" className={cn(
+                            <a href="https://codolio.com/profile/pavandoddavarapu" target="_blank" rel="noreferrer" title="Codolio Profile" className={cn(
                                 "p-2 transition-colors duration-300 flex items-center justify-center",
-                                theme === 'dark' ? "text-gray-600 dark:text-gray-400 hover:text-white" : "text-gray-500 hover:text-black"
+                                theme === 'dark' ? "text-gray-400 hover:text-white" : "text-gray-500 hover:text-black"
                             )}>
-                                <img src="https://codolio.com/codolio_assets/codolio.svg" className={cn("w-5 h-5", theme === 'dark' ? 'opacity-80 hover:opacity-100' : 'opacity-80 hover:opacity-100 scale-110')} alt="Codolio" />
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                                    <polyline points="16 18 22 12 16 6" />
+                                    <polyline points="8 6 2 12 8 18" />
+                                </svg>
                             </a>
 
-                            <a href="https://leetcode.com/u/pavandodddavarapu7/" target="_blank" rel="noreferrer" className={cn(
+                            <a href="https://leetcode.com/u/pavandodddavarapu7/" target="_blank" rel="noreferrer" title="LeetCode Profile" className={cn(
                                 "p-2 transition-colors duration-300 flex items-center justify-center",
-                                theme === 'dark' ? "text-gray-600 dark:text-gray-400 hover:text-white" : "text-gray-500 hover:text-black"
+                                theme === 'dark' ? "text-gray-400 hover:text-white" : "text-gray-500 hover:text-black"
                             )}>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" className={cn("w-5 h-5", theme === 'dark' ? 'invert opacity-80 hover:opacity-100' : 'opacity-80 hover:opacity-100')} alt="LeetCode" />
+                                <svg width="20" height="20" viewBox="0 0 24 24" className="w-5 h-5">
+                                    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.17 6.1l-2.858 2.858a1.349 1.349 0 0 0-.416.947c0 .347.14.676.386.914l4.524 4.524a1.36 1.36 0 0 0 .961.398c.356 0 .685-.14.931-.386l4.773-4.773a1.367 1.367 0 0 0 0-1.932l-2.28-2.28 2.858-2.858a1.367 1.367 0 0 0 0-1.932A1.367 1.367 0 0 0 13.483 0zm-2.82 8.04l2.28 2.28-3.812 3.812-4.524-4.524 3.812-3.812z" fill="#FFA116"/>
+                                    <path d="M20.811 13.01H10.666c-.702 0-1.27-.568-1.27-1.27 0-.702.568-1.27 1.27-1.27h10.145c.702 0 1.27.568 1.27 1.27 0 .702-.568 1.27-1.27 1.27z" fill="currentColor"/>
+                                </svg>
                             </a>
 
                             <a href="mailto:pavandoddavarapu7@gmail.com" className={cn(
