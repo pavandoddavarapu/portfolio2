@@ -202,9 +202,9 @@ const Education = () => {
                             {/* Right Side: Example Blogs */}
                             <div className="flex-1 w-full space-y-4">
                                 {[
-                                    { title: "Hospital Load Forecasting — ML, Time-Series, DTW + K-Shape Clustering", tag: "ML Project" },
-                                    { title: "Smart Waste Management System — IoT, GPS, LSTM/Prophet Forecasting", tag: "IoT & ML" },
-                                    { title: "Loan Default Prediction — XGBoost, Streamlit, Real-time Risk Scoring", tag: "Fintech ML" }
+                                { title: "Speak Up! — AI Speech Platform, Async Queue, Groq Whisper + Gemini Failover, Serverless", tag: "Full-Stack AI · Live" },
+                                { title: "Aegis Clinical AI — LangGraph Multi-Agent, Qdrant + Neo4j + Redis + PostgreSQL, HIPAA Guardrails", tag: "Agentic AI · Clinical" },
+                                { title: "Smart Waste Management System — IoT, GPS, LSTM/Prophet Forecasting", tag: "IoT & ML" }
                                 ].map((blog, idx) => (
                                     <a
                                         key={idx}

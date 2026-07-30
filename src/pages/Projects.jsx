@@ -73,29 +73,29 @@ const SpeakUpFeatured = () => {
             {/* Ambient glow */}
             <div className="absolute -inset-4 bg-gradient-to-br from-violet-500/10 via-pink-500/5 to-cyan-500/10 blur-3xl rounded-[40px] pointer-events-none" />
 
-            <div className="relative rounded-3xl overflow-hidden border border-white/10 dark:border-white/[0.07] bg-white/[0.02] dark:bg-black/30 backdrop-blur-sm">
+            <div className="relative rounded-3xl overflow-hidden border border-gray-200 dark:border-white/[0.07] bg-white dark:bg-black/30 backdrop-blur-sm shadow-lg dark:shadow-none">
 
                 {/* Header banner */}
-                <div className="relative px-8 pt-10 pb-8 bg-gradient-to-br from-violet-950/60 via-indigo-950/40 to-transparent border-b border-white/[0.07]">
+                <div className="relative px-8 pt-10 pb-8 bg-gradient-to-br from-violet-100 via-indigo-50 to-transparent dark:from-violet-950/60 dark:via-indigo-950/40 border-b border-gray-200 dark:border-white/[0.07]">
                     {/* Decorative grid lines */}
                     <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
                     <div className="relative flex flex-col md:flex-row md:items-start gap-6 justify-between">
                         <div>
                             <div className="flex items-center gap-3 mb-4">
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase bg-violet-500/20 border border-violet-400/40 text-violet-300">
+                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase bg-violet-500/20 border border-violet-400/40 text-violet-700 dark:text-violet-300">
                                     <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse inline-block" />
                                     Featured Project · Live in Production
                                 </span>
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 border border-emerald-400/30 text-emerald-300">
+                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 border border-emerald-400/30 text-emerald-700 dark:text-emerald-300">
                                     <Globe size={11} /> speakupai.me
                                 </span>
                             </div>
-                            <h3 className="text-4xl sm:text-5xl font-black text-white mb-3 tracking-tight">
+                            <h3 className="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white mb-3 tracking-tight">
                                 🎤 Speak Up!
                             </h3>
-                            <p className="text-lg text-gray-300 font-light max-w-2xl leading-relaxed">
-                                AI-powered English speaking practice platform — built with a <span className="text-white font-semibold">production-grade async processing pipeline</span>, multi-provider AI failover, real-time group discussion rooms, and a serverless architecture that scales to zero.
+                            <p className="text-lg text-gray-700 dark:text-gray-300 font-light max-w-2xl leading-relaxed">
+                                AI-powered English speaking practice platform — built with a <span className="text-gray-900 dark:text-white font-semibold">production-grade async processing pipeline</span>, multi-provider AI failover, real-time group discussion rooms, and a serverless architecture that scales to zero.
                             </p>
                         </div>
 
@@ -113,7 +113,7 @@ const SpeakUpFeatured = () => {
                                 href="https://github.com/pavandoddavarapu/english-project-testing"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white font-semibold text-sm hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+                                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-white font-semibold text-sm hover:bg-gray-100 dark:hover:bg-white/10 hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300"
                             >
                                 <Github size={16} /> Source Code
                             </a>
@@ -140,28 +140,28 @@ const SpeakUpFeatured = () => {
                             <motion.div
                                 key={i}
                                 variants={itemVariants}
-                                className="group relative p-5 rounded-2xl bg-white/[0.03] dark:bg-white/[0.02] border border-white/[0.06] hover:border-white/[0.12] transition-all duration-300 hover:-translate-y-1"
+                                className="group relative p-5 rounded-2xl bg-gray-50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/[0.06] hover:border-gray-300 dark:hover:border-white/[0.12] transition-all duration-300 hover:-translate-y-1"
                             >
                                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-[0.06] transition-opacity duration-300`} />
                                 <div className="relative">
                                     <div className={`inline-flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br ${item.color} bg-opacity-20 mb-3 text-white shadow-lg`}>
                                         {item.icon}
                                     </div>
-                                    <h4 className="text-sm font-bold text-white mb-2">{item.title}</h4>
-                                    <p className="text-xs text-gray-400 leading-relaxed">{item.desc}</p>
+                                    <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-2">{item.title}</h4>
+                                    <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">{item.desc}</p>
                                 </div>
                             </motion.div>
                         ))}
                     </motion.div>
 
                     {/* Tech stack row */}
-                    <div className="border-t border-white/[0.06] pt-6">
+                    <div className="border-t border-gray-200 dark:border-white/[0.06] pt-6">
                         <p className="text-xs font-bold tracking-widest uppercase text-gray-500 mb-4">Technology Stack</p>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                             {techStack.map((item, i) => (
-                                <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+                                <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-gray-50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/[0.05]">
                                     <span className="text-xs font-bold text-gray-500 shrink-0 w-16">{item.label}</span>
-                                    <span className="text-xs text-gray-300 leading-relaxed">{item.value}</span>
+                                    <span className="text-xs text-gray-700 dark:text-gray-300 leading-relaxed">{item.value}</span>
                                 </div>
                             ))}
                         </div>
@@ -170,8 +170,8 @@ const SpeakUpFeatured = () => {
                     {/* Engineering decisions callout */}
                     <div className="mt-6 p-5 rounded-2xl bg-gradient-to-r from-violet-500/[0.07] to-pink-500/[0.07] border border-violet-400/[0.15]">
                         <p className="text-xs font-bold tracking-widest uppercase text-violet-400 mb-2">Key Engineering Decision</p>
-                        <p className="text-sm text-gray-300 leading-relaxed">
-                            <span className="text-white font-semibold">Why async queue over synchronous AI calls?</span> — Speech analysis via Groq Whisper + LLM scoring takes 5–15s. A synchronous serverless HTTP call would timeout on mobile. The queue decouples submission from processing: client gets taskId in &lt;100ms, polls /api/status every 2s while a stall-detection mechanism auto-retriggers stalled workers after 12s.
+                        <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                            <span className="text-gray-900 dark:text-white font-semibold">Why async queue over synchronous AI calls?</span> — Speech analysis via Groq Whisper + LLM scoring takes 5–15s. A synchronous serverless HTTP call would timeout on mobile. The queue decouples submission from processing: client gets taskId in &lt;100ms, polls /api/status every 2s while a stall-detection mechanism auto-retriggers stalled workers after 12s.
                         </p>
                     </div>
                 </div>
@@ -179,7 +179,7 @@ const SpeakUpFeatured = () => {
                 {/* Tags footer */}
                 <div className="px-8 pb-8 flex flex-wrap gap-2">
                     {['Node.js ESM', 'Vercel Serverless', 'PostgreSQL', 'Firebase Firestore', 'Groq Whisper', 'Gemini 2.0', 'Llama 3.1', 'Vanilla JS', 'PWA', 'MediaRecorder API', 'Rate Limiting', 'Async Queue', 'Multi-Provider AI', 'Jitsi Meet'].map(tag => (
-                        <span key={tag} className="text-xs px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-gray-300 font-medium">
+                        <span key={tag} className="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-white/[0.04] border border-gray-200 dark:border-white/[0.08] text-gray-700 dark:text-gray-300 font-medium">
                             {tag}
                         </span>
                     ))}
@@ -269,28 +269,28 @@ const AegisFeatured = () => {
         >
             <div className="absolute -inset-4 bg-gradient-to-br from-cyan-500/10 via-teal-500/5 to-emerald-500/10 blur-3xl rounded-[40px] pointer-events-none" />
 
-            <div className="relative rounded-3xl overflow-hidden border border-white/10 dark:border-white/[0.07] bg-white/[0.02] dark:bg-black/30 backdrop-blur-sm">
+            <div className="relative rounded-3xl overflow-hidden border border-gray-200 dark:border-white/[0.07] bg-white dark:bg-black/30 backdrop-blur-sm shadow-lg dark:shadow-none">
 
                 {/* Header */}
-                <div className="relative px-8 pt-10 pb-8 bg-gradient-to-br from-cyan-950/60 via-teal-950/40 to-transparent border-b border-white/[0.07]">
+                <div className="relative px-8 pt-10 pb-8 bg-gradient-to-br from-cyan-50 via-teal-50 to-transparent dark:from-cyan-950/60 dark:via-teal-950/40 border-b border-gray-200 dark:border-white/[0.07]">
                     <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
                     <div className="relative flex flex-col md:flex-row md:items-start gap-6 justify-between">
                         <div>
                             <div className="flex flex-wrap items-center gap-3 mb-4">
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase bg-cyan-500/20 border border-cyan-400/40 text-cyan-300">
+                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase bg-cyan-500/20 border border-cyan-400/40 text-cyan-700 dark:text-cyan-300">
                                     <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse inline-block" />
                                     Featured Project · Multi-Agent AI System
                                 </span>
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-teal-500/15 border border-teal-400/30 text-teal-300">
+                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-teal-500/15 border border-teal-400/30 text-teal-700 dark:text-teal-300">
                                     ⚕️ Clinical Intelligence · Phase 13
                                 </span>
                             </div>
-                            <h3 className="text-4xl sm:text-5xl font-black text-white mb-3 tracking-tight">
+                            <h3 className="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white mb-3 tracking-tight">
                                 ⚕️ Aegis Clinical AI
                             </h3>
-                            <p className="text-lg text-gray-300 font-light max-w-2xl leading-relaxed">
-                                <span className="text-white font-semibold">Conversational Adaptive Multi-Agent Clinical Intelligence Platform</span> — a physician decision-support copilot coordinating 9 specialized AI agents via LangGraph, performing hybrid RAG, knowledge-graph traversal, live medical research, multimodal analysis, and hallucination-checked synthesis inside strict HIPAA-aligned safety guardrails.
+                            <p className="text-lg text-gray-700 dark:text-gray-300 font-light max-w-2xl leading-relaxed">
+                                <span className="text-gray-900 dark:text-white font-semibold">Conversational Adaptive Multi-Agent Clinical Intelligence Platform</span> — a physician decision-support copilot coordinating 9 specialized AI agents via LangGraph, performing hybrid RAG, knowledge-graph traversal, live medical research, multimodal analysis, and hallucination-checked synthesis inside strict HIPAA-aligned safety guardrails.
                             </p>
                         </div>
                         <div className="flex flex-col gap-3 shrink-0 md:items-end">
@@ -325,29 +325,29 @@ const AegisFeatured = () => {
                             <motion.div
                                 key={i}
                                 variants={itemVariants}
-                                className="group relative p-5 rounded-2xl bg-white/[0.03] dark:bg-white/[0.02] border border-white/[0.06] hover:border-white/[0.12] transition-all duration-300 hover:-translate-y-1"
+                                className="group relative p-5 rounded-2xl bg-gray-50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/[0.06] hover:border-gray-300 dark:hover:border-white/[0.12] transition-all duration-300 hover:-translate-y-1"
                             >
                                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-[0.06] transition-opacity duration-300`} />
                                 <div className="relative">
                                     <div className={`inline-flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br ${item.color} bg-opacity-20 mb-3 text-white shadow-lg`}>
                                         {item.icon}
                                     </div>
-                                    <h4 className="text-sm font-bold text-white mb-2">{item.title}</h4>
-                                    <p className="text-xs text-gray-400 leading-relaxed">{item.desc}</p>
+                                    <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-2">{item.title}</h4>
+                                    <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">{item.desc}</p>
                                 </div>
                             </motion.div>
                         ))}
                     </motion.div>
 
                     {/* Agent roster */}
-                    <div className="border-t border-white/[0.06] pt-6 mb-6">
+                    <div className="border-t border-gray-200 dark:border-white/[0.06] pt-6 mb-6">
                         <p className="text-xs font-bold tracking-widest uppercase text-gray-500 mb-4">Agent Roster — 9 Specialized Nodes</p>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                             {agentRoster.map((agent, i) => (
-                                <div key={i} className="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+                                <div key={i} className="flex items-start gap-2.5 p-3 rounded-xl bg-gray-50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/[0.05]">
                                     <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 shrink-0" />
                                     <div>
-                                        <p className="text-xs font-bold text-white">{agent.name}</p>
+                                        <p className="text-xs font-bold text-gray-900 dark:text-white">{agent.name}</p>
                                         <p className="text-[11px] text-gray-500 mt-0.5">{agent.role}</p>
                                     </div>
                                 </div>
@@ -356,13 +356,13 @@ const AegisFeatured = () => {
                     </div>
 
                     {/* Tech stack */}
-                    <div className="border-t border-white/[0.06] pt-6">
+                    <div className="border-t border-gray-200 dark:border-white/[0.06] pt-6">
                         <p className="text-xs font-bold tracking-widest uppercase text-gray-500 mb-4">Technology Stack</p>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                             {techStack.map((item, i) => (
-                                <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+                                <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-gray-50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/[0.05]">
                                     <span className="text-xs font-bold text-gray-500 shrink-0 w-24">{item.label}</span>
-                                    <span className="text-xs text-gray-300 leading-relaxed">{item.value}</span>
+                                    <span className="text-xs text-gray-700 dark:text-gray-300 leading-relaxed">{item.value}</span>
                                 </div>
                             ))}
                         </div>
@@ -371,8 +371,8 @@ const AegisFeatured = () => {
                     {/* Engineering decision */}
                     <div className="mt-6 p-5 rounded-2xl bg-gradient-to-r from-cyan-500/[0.07] to-teal-500/[0.07] border border-cyan-400/[0.15]">
                         <p className="text-xs font-bold tracking-widest uppercase text-cyan-400 mb-2">Key Engineering Decision</p>
-                        <p className="text-sm text-gray-300 leading-relaxed">
-                            <span className="text-white font-semibold">Why 4 databases instead of 1?</span> — Each is purpose-built for what it does best: Qdrant handles high-dimensional semantic search with BM25 hybrid sparse recall; Neo4j traverses medical ontology paths (disease → drug → interaction) structurally impossible in SQL; Redis provides microsecond session caching + Celery queuing; PostgreSQL stores structured telemetry with full SQL aggregation for dashboards. No single DB does all of this well.
+                        <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                            <span className="text-gray-900 dark:text-white font-semibold">Why 4 databases instead of 1?</span> — Each is purpose-built for what it does best: Qdrant handles high-dimensional semantic search with BM25 hybrid sparse recall; Neo4j traverses medical ontology paths (disease → drug → interaction) structurally impossible in SQL; Redis provides microsecond session caching + Celery queuing; PostgreSQL stores structured telemetry with full SQL aggregation for dashboards. No single DB does all of this well.
                         </p>
                     </div>
                 </div>
@@ -380,7 +380,7 @@ const AegisFeatured = () => {
                 {/* Tags footer */}
                 <div className="px-8 pb-8 flex flex-wrap gap-2">
                     {['LangGraph', 'FastAPI', 'Next.js', 'Qdrant', 'Neo4j', 'PostgreSQL', 'Redis', 'LangSmith', 'Docker', 'Python 3.10+', 'TypeScript', 'SSE Streaming', 'BM25 Hybrid RAG', 'Pydantic v2', 'Prometheus', 'Multi-Agent AI', 'HIPAA Guardrails', 'PubMed API'].map(tag => (
-                        <span key={tag} className="text-xs px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-gray-300 font-medium">
+                        <span key={tag} className="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-white/[0.04] border border-gray-200 dark:border-white/[0.08] text-gray-700 dark:text-gray-300 font-medium">
                             {tag}
                         </span>
                     ))}
