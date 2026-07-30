@@ -50,7 +50,7 @@ const CommandPalette = () => {
         { id: 'contact', title: 'Contact Me', icon: <Mail size={16} />, path: '/contact' },
         { id: 'admin', title: 'Command Center', icon: <Terminal size={16} />, path: '/command-center' },
         { id: 'github', title: 'GitHub Profile', icon: <Database size={16} />, action: () => { window.open('https://github.com/pavandoddavarapu', '_blank'); setIsOpen(false); } },
-        { id: 'linkedin', title: 'LinkedIn Profile', icon: <Linkedin size={16} />, action: () => { window.open('https://www.linkedin.com/in/pavandoddavarapu/', '_blank'); setIsOpen(false); } }
+        { id: 'linkedin', title: 'LinkedIn Profile', icon: <Linkedin size={16} />, action: () => { window.open('https://www.linkedin.com/in/khushboo0705/', '_blank'); setIsOpen(false); } }
     ];
 
     const filteredActions = actions.filter((action) =>
@@ -75,7 +75,7 @@ const CommandPalette = () => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     onClick={() => setIsOpen(false)}
-                    className="fixed inset-0 bg-black/40 dark:bg-black/70 backdrop-blur-sm z-[100]"
+                    className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100]"
                 />
             )}
             {isOpen && (
@@ -85,24 +85,21 @@ const CommandPalette = () => {
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.95, y: -20 }}
                     transition={{ duration: 0.2 }}
-                    className="fixed top-[20%] left-1/2 -translate-x-1/2 w-[90%] max-w-lg bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 rounded-2xl shadow-2xl z-[101] overflow-hidden flex flex-col"
+                    className="fixed top-[20%] left-1/2 -translate-x-1/2 w-[90%] max-w-lg dark:bg-[#0a0a0a] border border-gray-700/50 rounded-2xl shadow-2xl z-[101] overflow-hidden flex flex-col"
                 >
-                    <div className="flex items-center px-4 py-3 border-b border-gray-200 dark:border-gray-800">
-                        <Search className="w-5 h-5 text-gray-400 dark:text-gray-400 mr-3" />
+                    <div className="flex items-center px-4 py-3 border-b border-gray-800">
+                        <Search className="w-5 h-5 text-gray-600 dark:text-gray-400 mr-3" />
                         <input
                             ref={inputRef}
                             type="text"
                             placeholder="Search pages, commands (Cmd + K)"
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
-                            className="flex-1 bg-transparent border-none outline-none text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-base sm:text-lg"
+                            className="flex-1 bg-transparent border-none outline-none text-gray-900 dark:text-white placeholder-gray-500 text-lg"
                             spellCheck="false"
                         />
-                        <button 
-                            onClick={() => setIsOpen(false)} 
-                            className="text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
-                        >
-                            <X size={18} />
+                        <button onClick={() => setIsOpen(false)} className="text-gray-500 hover:text-white transition-colors p-1 rounded-md hover:bg-gray-800">
+                            <X size={20} />
                         </button>
                     </div>
                     <div className="max-h-72 overflow-y-auto p-2">
@@ -114,19 +111,19 @@ const CommandPalette = () => {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: index * 0.03 }}
                                     onClick={() => handleAction(action)}
-                                    className="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all text-left group"
+                                    className="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 text-gray-700 dark:text-gray-300 hover:text-white transition-all text-left group"
                                 >
-                                    <div className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800/60 text-gray-600 dark:text-gray-300 group-hover:bg-blue-500/10 dark:group-hover:bg-blue-500/20 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                    <div className="p-2 rounded-lg bg-gray-800/50 group-hover:bg-blue-500/20 group-hover:text-blue-400 transition-colors">
                                         {action.icon}
                                     </div>
-                                    <span className="font-medium text-sm sm:text-base">{action.title}</span>
-                                    <span className="ml-auto text-xs text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-400">
+                                    <span className="font-medium">{action.title}</span>
+                                    <span className="ml-auto text-xs text-gray-600 group-hover:text-gray-600 dark:text-gray-400">
                                         {action.path ? 'Navigation' : 'Action'}
                                     </span>
                                 </motion.button>
                             ))
                         ) : (
-                            <div className="text-center py-8 text-gray-400 dark:text-gray-500">
+                            <div className="text-center py-8 text-gray-500">
                                 No results found for "{search}"
                             </div>
                         )}

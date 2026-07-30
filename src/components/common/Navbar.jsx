@@ -98,7 +98,7 @@ const Navbar = () => {
                         })}
                     </div>
 
-                    <div className="w-px h-6 bg-black/10 dark:bg-white/10 hidden sm:block" />
+                    <div className="w-px h-6 bg-white/10 hidden sm:block" />
 
                     {/* Socials / Actions */}
                     <div className="hidden sm:flex items-center gap-2">
@@ -107,7 +107,7 @@ const Navbar = () => {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 onClick={() => window.dispatchEvent(new CustomEvent('open-command-palette'))}
-                                className="mr-2 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white flex items-center gap-2 text-xs font-mono"
+                                className="mr-2 px-3 py-1.5 rounded-lg bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-white flex items-center gap-2 text-xs font-mono"
                             >
                                 <Search size={14} />
                                 <span>Cmd K</span>
@@ -127,25 +127,28 @@ const Navbar = () => {
                         </MagneticButton>
 
                         <MagneticButton href="https://codolio.com/profile/pavandoddavarapu">
-                            <div className="p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white" title="Codolio Profile">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px]">
-                                    <polyline points="16 18 22 12 16 6" />
-                                    <polyline points="8 6 2 12 8 18" />
-                                </svg>
+                            <div className="p-2 rounded-full hover:bg-white/10 transition-colors">
+                                <img
+                                    src="https://codolio.com/codolio_assets/codolio.svg"
+                                    className={cn("w-[18px] h-[18px]", theme === 'dark' ? 'opacity-80' : 'opacity-80 scale-110')}
+                                    alt="Codolio"
+                                />
                             </div>
                         </MagneticButton>
 
                         <MagneticButton href="https://leetcode.com/u/pavandodddavarapu7/">
-                            <div className="p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white" title="LeetCode Profile">
-                                <svg width="18" height="18" viewBox="0 0 24 24" className="w-[18px] h-[18px]">
-                                    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.17 6.1l-2.858 2.858a1.349 1.349 0 0 0-.416.947c0 .347.14.676.386.914l4.524 4.524a1.36 1.36 0 0 0 .961.398c.356 0 .685-.14.931-.386l4.773-4.773a1.367 1.367 0 0 0 0-1.932l-2.28-2.28 2.858-2.858a1.367 1.367 0 0 0 0-1.932A1.367 1.367 0 0 0 13.483 0zm-2.82 8.04l2.28 2.28-3.812 3.812-4.524-4.524 3.812-3.812z" fill="#FFA116"/>
-                                    <path d="M20.811 13.01H10.666c-.702 0-1.27-.568-1.27-1.27 0-.702.568-1.27 1.27-1.27h10.145c.702 0 1.27.568 1.27 1.27 0 .702-.568 1.27-1.27 1.27z" fill="currentColor"/>
-                                </svg>
+                            <div className="p-2 rounded-full hover:bg-white/10 transition-colors">
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                                    className={cn("w-[18px] h-[18px]", theme === 'dark' ? 'invert opacity-80' : 'opacity-80')}
+                                    alt="LeetCode"
+                                />
                             </div>
                         </MagneticButton>
 
+
                         <MagneticButton onClick={toggleTheme}>
-                            <div className="p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white cursor-pointer">
+                            <div className="p-2 rounded-full hover:bg-white/10 transition-colors text-gray-700 dark:text-gray-300 hover:text-white cursor-pointer">
                                 {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
                             </div>
                         </MagneticButton>
