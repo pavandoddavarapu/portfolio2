@@ -282,8 +282,8 @@ const AegisFeatured = () => {
                                     <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse inline-block" />
                                     Featured Project · Multi-Agent AI System
                                 </span>
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-teal-500/15 border border-teal-400/30 text-teal-700 dark:text-teal-300">
-                                    ⚕️ Clinical Intelligence · Phase 13
+                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 border border-emerald-400/30 text-emerald-700 dark:text-emerald-300">
+                                    <Globe size={11} /> aegis-clinical-mu.vercel.app
                                 </span>
                             </div>
                             <h3 className="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white mb-3 tracking-tight">
@@ -295,10 +295,18 @@ const AegisFeatured = () => {
                         </div>
                         <div className="flex flex-col gap-3 shrink-0 md:items-end">
                             <a
-                                href="https://github.com/pavandoddavarapu/aegis_agenticAi_capstone"
+                                href="https://aegis-clinical-mu.vercel.app/workspace"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-bold text-sm hover:from-cyan-400 hover:to-teal-400 transition-all duration-300 shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)]"
+                            >
+                                <ExternalLink size={16} /> Live Demo
+                            </a>
+                            <a
+                                href="https://github.com/pavandoddavarapu/aegis_agenticAi_capstone"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-white font-semibold text-sm hover:bg-gray-100 dark:hover:bg-white/10 hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300"
                             >
                                 <Github size={16} /> Source Code
                             </a>
