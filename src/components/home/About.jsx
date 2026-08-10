@@ -28,7 +28,7 @@ const About = () => {
 
                         <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed font-light text-base sm:text-lg mb-8">
                             <p>
-                                I’m a <span className="text-blue-600 dark:text-blue-400 font-semibold">Pre-Final Year B.Tech Computer Science student</span> at Lovely Professional University (<span className="text-blue-600 dark:text-blue-400 font-semibold">CGPA: 8.49</span>), driven by a deep passion for <span className="text-blue-600 dark:text-blue-400 font-semibold">Machine Learning, Artificial Intelligence, and full-stack development</span>.
+                                I’m a <span className="text-blue-600 dark:text-blue-400 font-semibold">Pre-Final Year B.Tech Computer Science student</span> at Lovely Professional University (<span className="text-blue-600 dark:text-blue-400 font-semibold">CGPA: 8.59</span>), driven by a deep passion for <span className="text-blue-600 dark:text-blue-400 font-semibold">Machine Learning, Artificial Intelligence, and full-stack development</span>.
                             </p>
                             <p>
                                 I specialize in building <span className="text-purple-600 dark:text-purple-400 font-semibold">end-to-end intelligent systems</span> from data preprocessing and model development to deploying scalable, real-time applications. My tech stack includes Python, Java, C++, SQL, along with modern ML and AI tools like Scikit-learn, Hugging Face, LangChain, and Streamlit.
